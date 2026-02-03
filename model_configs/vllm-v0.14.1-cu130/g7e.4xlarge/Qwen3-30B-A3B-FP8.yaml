@@ -1,0 +1,31 @@
+deployment:
+  docker_image: "vllm/vllm-openai:v0.14.1-cu130"
+  container_name: "vllm"
+  port: 8080
+  # Universal Docker parameters
+  docker_params:
+    gpus: "all"
+    shm-size: "1000g"
+    ipc: "host"
+    network: "host"
+    volume:
+      - "/opt/dlami/nvme/:/vllm-workspace/"
+      - "/root/.cache:/root/.cache"
+  # Universal application arguments
+  app_args:
+    model: "Qwen/Qwen3-30B-A3B-FP8"
+    trust-remote-code: true
+    gpu-memory-utilization: 0.90
+    tensor-parallel-size: 1
+    data-parallel-size: 1
+
+test_matrix:
+  input_tokens: [1600, 6400]
+  output_tokens: [100, 400, 1000]
+  processing_num: [1, 16, 32, 64]
+  random_tokens: [100, 1600, 6400]
+
+test_config:
+  requests_per_process: 5
+  warmup_requests: 1
+  cooldown_seconds: 5
