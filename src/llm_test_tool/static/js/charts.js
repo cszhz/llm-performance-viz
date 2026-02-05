@@ -79,7 +79,8 @@ export function createChart(canvasId, title, metric, unit, data) {
         const instanceInfo = `${instanceBase}.${instanceSize}`;
         const modelName = combo.model_name;
         const tokenInfo = `${combo.input_tokens}(${combo.random_tokens})->${combo.output_tokens}`;
-        const label = `${runtimeName}/${instanceInfo}/${modelName} ${tokenInfo}`;
+        const imageInfo = combo.image_count > 0 ? ` img:${combo.image_count}` : '';
+        const label = `${runtimeName}/${instanceInfo}/${modelName} ${tokenInfo}${imageInfo}`;
 
         return {
             label: label,
@@ -243,9 +244,10 @@ export function updateComparisonList() {
     STATE.selectedCombinations.forEach((combo, index) => {
         const item = document.createElement('div');
         item.className = 'comparison-item';
+        const imageInfo = combo.image_count > 0 ? `, img:${combo.image_count}@${combo.image_size}` : '';
         item.innerHTML = `
             <span>${combo.runtime} - ${combo.instance_type} - ${combo.model_name} 
-            (in:${combo.input_tokens}, out:${combo.output_tokens}, rand:${combo.random_tokens})</span>
+            (in:${combo.input_tokens}, out:${combo.output_tokens}, rand:${combo.random_tokens}${imageInfo})</span>
             <button class="remove-btn" onclick="window.chartControls.removeFromComparison(${index})">Remove</button>
         `;
         itemsContainer.appendChild(item);
@@ -266,7 +268,9 @@ export function updateUrlWithState() {
             m: combo.model_name,
             it: combo.input_tokens,
             ot: combo.output_tokens,
-            rt: combo.random_tokens
+            rt: combo.random_tokens,
+            ic: combo.image_count || 0,
+            is: combo.image_size || ''
         }));
         url.searchParams.set('combinations', btoa(JSON.stringify(combinationsData)));
     }

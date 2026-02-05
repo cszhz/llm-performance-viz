@@ -239,15 +239,32 @@ class ResultsDataProvider:
     
     def parse_filename(self, filename: str) -> Optional[Dict[str, str]]:
         """Parse test result filename to extract parameters"""
-        pattern = r'test_in:(\d+)_out:(\d+)_proc:(\d+)_rand:(\d+)\.json'
-        match = re.match(pattern, filename)
+        # Pattern with image parameters: test_in:1600_out:100_proc:16_rand:100_img:2_512x512.json
+        pattern_with_img = r'test_in:(\d+)_out:(\d+)_proc:(\d+)_rand:(\d+)_img:(\d+)_(\d+x\d+)\.json'
+        match = re.match(pattern_with_img, filename)
         
         if match:
             return {
                 'input_tokens': int(match.group(1)),
                 'output_tokens': int(match.group(2)),
                 'processes': int(match.group(3)),
-                'random_tokens': int(match.group(4))
+                'random_tokens': int(match.group(4)),
+                'image_count': int(match.group(5)),
+                'image_size': match.group(6)
+            }
+        
+        # Pattern without image parameters: test_in:1600_out:100_proc:16_rand:100.json
+        pattern_no_img = r'test_in:(\d+)_out:(\d+)_proc:(\d+)_rand:(\d+)\.json'
+        match = re.match(pattern_no_img, filename)
+        
+        if match:
+            return {
+                'input_tokens': int(match.group(1)),
+                'output_tokens': int(match.group(2)),
+                'processes': int(match.group(3)),
+                'random_tokens': int(match.group(4)),
+                'image_count': 0,
+                'image_size': ''
             }
         return None
     
@@ -352,11 +369,22 @@ class ResultsDataProvider:
             (self.df['model_name'] == model_name)
         ]
         
-        return {
+        result = {
             'input_tokens': sorted(filtered['input_tokens'].unique().tolist(), key=int),
             'output_tokens': sorted(filtered['output_tokens'].unique().tolist(), key=int),
             'random_tokens': sorted(filtered['random_tokens'].unique().tolist(), key=int)
         }
+        
+        # Add image parameters if they exist
+        if 'image_count' in filtered.columns:
+            image_counts = sorted(filtered['image_count'].unique().tolist(), key=int)
+            result['image_count'] = image_counts
+        
+        if 'image_size' in filtered.columns:
+            image_sizes = sorted([s for s in filtered['image_size'].unique().tolist() if s])
+            result['image_size'] = image_sizes
+        
+        return result
     
     def get_performance_data(self, filters: Dict) -> List[Dict]:
         """Get performance data based on filters"""
@@ -364,14 +392,23 @@ class ResultsDataProvider:
             return []
         
         filtered_df = self.df.copy()
+        print(f"[DEBUG] Filters received: {filters}")
+        print(f"[DEBUG] Initial rows: {len(filtered_df)}")
         
         # Apply filters
         for key, value in filters.items():
-            if key in filtered_df.columns and value is not None:
-                if isinstance(value, list):
-                    filtered_df = filtered_df[filtered_df[key].isin(value)]
-                else:
-                    filtered_df = filtered_df[filtered_df[key] == value]
+            if key not in filtered_df.columns:
+                print(f"[DEBUG] Skipping filter '{key}' - column not found")
+                continue
+            # Skip None values but allow 0, empty string, etc.
+            if value is None:
+                print(f"[DEBUG] Skipping filter '{key}' - value is None")
+                continue
+            if isinstance(value, list):
+                filtered_df = filtered_df[filtered_df[key].isin(value)]
+            else:
+                filtered_df = filtered_df[filtered_df[key] == value]
+            print(f"[DEBUG] After filter '{key}={value}': {len(filtered_df)} rows")
         
         # Sort by processes for proper line plotting
         filtered_df = filtered_df.sort_values('processes')
@@ -609,7 +646,9 @@ async def get_performance_data(
     model_name: Optional[str] = Query(None),
     input_tokens: Optional[int] = Query(None),
     output_tokens: Optional[int] = Query(None),
-    random_tokens: Optional[int] = Query(None)
+    random_tokens: Optional[int] = Query(None),
+    image_count: Optional[int] = Query(None),
+    image_size: Optional[str] = Query(None)
 ):
     """Get performance data based on filters"""
     filters = {}
@@ -627,6 +666,10 @@ async def get_performance_data(
         filters['output_tokens'] = output_tokens
     if random_tokens is not None:
         filters['random_tokens'] = random_tokens
+    if image_count is not None:
+        filters['image_count'] = image_count
+    if image_size is not None:
+        filters['image_size'] = image_size
     
     data = data_provider.get_performance_data(filters)
     return data

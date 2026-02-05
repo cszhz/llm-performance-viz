@@ -49,6 +49,18 @@
                 <input type="range" id="random-tokens" class="slider" min="100" max="4000" value="1600">
             </div>
 
+            <div class="slider-group" id="image-count-group" style="display: none;">
+                <label for="image-count">Image Count: <span id="image-count-value">0</span></label>
+                <input type="range" id="image-count" class="slider" min="0" max="10" value="0">
+            </div>
+
+            <div class="slider-group" id="image-size-group" style="display: none;">
+                <label for="image-size">Image Size: <span id="image-size-value">-</span></label>
+                <select id="image-size" class="select-input" disabled>
+                    <option value="">-</option>
+                </select>
+            </div>
+
             <div class="button-group" style="margin-top: 15px;">
                 <button class="btn btn-success" id="add-chart-btn" onclick="addCurrentToChart()"
                     title="Add current model with token settings to comparison" disabled>
@@ -119,7 +131,7 @@
     </div>
 
     <!-- JavaScript modules -->
-    <script type="module" src="static/js/main.js"></script>
+    <script type="module" src="static/js/main.js?v=2"></script>
 </body>
 
 </html>

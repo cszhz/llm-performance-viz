@@ -26,7 +26,8 @@ export const CONFIG = {
     DEFAULT_SLIDERS: [
         { id: 'input-tokens', min: 100, max: 4000, default: 1600 },
         { id: 'output-tokens', min: 50, max: 2000, default: 400 },
-        { id: 'random-tokens', min: 100, max: 4000, default: 1600 }
+        { id: 'random-tokens', min: 100, max: 4000, default: 1600 },
+        { id: 'image-count', min: 0, max: 10, default: 0 }
     ]
 };
 

@@ -154,8 +154,10 @@ async function handleModelCheckboxChange(node, isChecked) {
         const inputTokensSlider = document.getElementById('input-tokens');
         const outputTokensSlider = document.getElementById('output-tokens');
         const randomTokensSlider = document.getElementById('random-tokens');
+        const imageCountSlider = document.getElementById('image-count');
+        const imageSizeSelect = document.getElementById('image-size');
 
-        let inputTokens, outputTokens, randomTokens;
+        let inputTokens, outputTokens, randomTokens, imageCount, imageSize;
 
         if (inputTokensSlider.disabled || outputTokensSlider.disabled || randomTokensSlider.disabled) {
             inputTokens = 1600;
@@ -167,13 +169,18 @@ async function handleModelCheckboxChange(node, isChecked) {
             randomTokens = parseInt(randomTokensSlider.value);
         }
 
+        imageCount = imageCountSlider && !imageCountSlider.disabled ? parseInt(imageCountSlider.value) : 0;
+        imageSize = imageSizeSelect && !imageSizeSelect.disabled ? imageSizeSelect.value : '';
+
         const combination = {
             runtime: node.runtime,
             instance_type: node.instance_type,
             model_name: node.model_name,
             input_tokens: inputTokens,
             output_tokens: outputTokens,
-            random_tokens: randomTokens
+            random_tokens: randomTokens,
+            image_count: imageCount,
+            image_size: imageSize
         };
 
         // Check if combination already exists
@@ -183,7 +190,9 @@ async function handleModelCheckboxChange(node, isChecked) {
             c.model_name === combination.model_name &&
             c.input_tokens === combination.input_tokens &&
             c.output_tokens === combination.output_tokens &&
-            c.random_tokens === combination.random_tokens
+            c.random_tokens === combination.random_tokens &&
+            c.image_count === combination.image_count &&
+            c.image_size === combination.image_size
         );
 
         if (!exists) {

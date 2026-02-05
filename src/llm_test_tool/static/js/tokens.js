@@ -22,7 +22,8 @@ export function preserveTokenSelections(newParams) {
     const sliders = [
         { id: 'input-tokens', key: 'input_tokens', valueId: 'input-tokens-value' },
         { id: 'output-tokens', key: 'output_tokens', valueId: 'output-tokens-value' },
-        { id: 'random-tokens', key: 'random_tokens', valueId: 'random-tokens-value' }
+        { id: 'random-tokens', key: 'random_tokens', valueId: 'random-tokens-value' },
+        { id: 'image-count', key: 'image_count', valueId: 'image-count-value' }
     ];
 
     sliders.forEach(slider => {
@@ -49,6 +50,8 @@ export function preserveTokenSelections(newParams) {
                     defaultValue = values.includes(400) ? 400 : values[0];
                 } else if (slider.id === 'random-tokens') {
                     defaultValue = values.includes(1600) ? 1600 : values[0];
+                } else if (slider.id === 'image-count') {
+                    defaultValue = values.includes(0) ? 0 : values[0];
                 } else {
                     defaultValue = values[0];
                 }
@@ -61,13 +64,59 @@ export function preserveTokenSelections(newParams) {
             if (slider.id === 'random-tokens') {
                 sliderElement.originalAvailableValues = [...values];
             }
+            
+            // Show image count group if it has values
+            if (slider.id === 'image-count') {
+                const imageCountGroup = document.getElementById('image-count-group');
+                if (imageCountGroup) {
+                    imageCountGroup.style.display = 'block';
+                }
+            }
         } else {
             sliderElement.disabled = true;
-            sliderElement.value = 0;
+            sliderElement.value = slider.id === 'image-count' ? 0 : 0;
             valueElement.textContent = '-';
             sliderElement.availableValues = [];
+            
+            // Hide image count group if no values
+            if (slider.id === 'image-count') {
+                const imageCountGroup = document.getElementById('image-count-group');
+                if (imageCountGroup) {
+                    imageCountGroup.style.display = 'none';
+                }
+            }
         }
     });
+
+    // Handle image size dropdown
+    const imageSizes = newParams['image_size'];
+    const imageSizeSelect = document.getElementById('image-size');
+    const imageSizeValue = document.getElementById('image-size-value');
+    const imageSizeGroup = document.getElementById('image-size-group');
+    
+    if (imageSizes && imageSizes.length > 0) {
+        imageSizeSelect.innerHTML = '';
+        imageSizes.forEach(size => {
+            const option = document.createElement('option');
+            option.value = size;
+            option.textContent = size;
+            imageSizeSelect.appendChild(option);
+        });
+        imageSizeSelect.disabled = false;
+        imageSizeSelect.availableValues = imageSizes;
+        imageSizeValue.textContent = imageSizeSelect.value;
+        if (imageSizeGroup) {
+            imageSizeGroup.style.display = 'block';
+        }
+    } else {
+        imageSizeSelect.innerHTML = '<option value="">-</option>';
+        imageSizeSelect.disabled = true;
+        imageSizeSelect.availableValues = [];
+        imageSizeValue.textContent = '-';
+        if (imageSizeGroup) {
+            imageSizeGroup.style.display = 'none';
+        }
+    }
 
     setupSliderEventListeners();
     updateRandomTokensMax();
@@ -98,11 +147,15 @@ export function setupSliderEventListeners() {
     const inputTokensSlider = document.getElementById('input-tokens');
     const outputTokensSlider = document.getElementById('output-tokens');
     const randomTokensSlider = document.getElementById('random-tokens');
+    const imageCountSlider = document.getElementById('image-count');
+    const imageSizeSelect = document.getElementById('image-size');
 
     // Remove existing event listeners to avoid duplicates
     inputTokensSlider.oninput = null;
     outputTokensSlider.oninput = null;
     randomTokensSlider.oninput = null;
+    if (imageCountSlider) imageCountSlider.oninput = null;
+    if (imageSizeSelect) imageSizeSelect.onchange = null;
 
     // Input tokens slider
     inputTokensSlider.addEventListener('input', function () {
@@ -140,6 +193,29 @@ export function setupSliderEventListeners() {
         document.getElementById('random-tokens-value').textContent = value;
         updateCheckedModelCombinations();
     });
+
+    // Image count slider
+    if (imageCountSlider) {
+        imageCountSlider.addEventListener('input', function () {
+            if (this.disabled) return;
+            let value = parseInt(this.value);
+            if (this.availableValues && this.availableValues.length > 0) {
+                value = findClosestAvailableValue(this.value, this.availableValues);
+                this.value = value;
+            }
+            document.getElementById('image-count-value').textContent = value;
+            updateCheckedModelCombinations();
+        });
+    }
+
+    // Image size select
+    if (imageSizeSelect) {
+        imageSizeSelect.addEventListener('change', function () {
+            if (this.disabled) return;
+            document.getElementById('image-size-value').textContent = this.value || '-';
+            updateCheckedModelCombinations();
+        });
+    }
 }
 
 export function findClosestAvailableValue(targetValue, availableValues) {
@@ -160,6 +236,18 @@ export function disableTokenSliders() {
         sliderElement.value = slider.default;
         valueElement.textContent = slider.default;
     });
+
+    // Hide and disable image controls
+    const imageCountGroup = document.getElementById('image-count-group');
+    const imageSizeGroup = document.getElementById('image-size-group');
+    const imageSizeSelect = document.getElementById('image-size');
+    
+    if (imageCountGroup) imageCountGroup.style.display = 'none';
+    if (imageSizeGroup) imageSizeGroup.style.display = 'none';
+    if (imageSizeSelect) {
+        imageSizeSelect.disabled = true;
+        imageSizeSelect.innerHTML = '<option value="">-</option>';
+    }
 
     const addChartBtn = document.getElementById('add-chart-btn');
     if (addChartBtn) {
@@ -218,6 +306,10 @@ function updateCheckedModelCombinations() {
     const inputTokens = parseInt(document.getElementById('input-tokens').value);
     const outputTokens = parseInt(document.getElementById('output-tokens').value);
     const randomTokens = parseInt(document.getElementById('random-tokens').value);
+    const imageCountSlider = document.getElementById('image-count');
+    const imageSizeSelect = document.getElementById('image-size');
+    const imageCount = imageCountSlider && !imageCountSlider.disabled ? parseInt(imageCountSlider.value) : 0;
+    const imageSize = imageSizeSelect && !imageSizeSelect.disabled ? imageSizeSelect.value : '';
 
     const currentModelCheckbox = document.querySelector('.tree-item.selected .tree-checkbox');
     const exactConfigExists = STATE.selectedCombinations.some(c =>
@@ -226,7 +318,9 @@ function updateCheckedModelCombinations() {
         c.model_name === STATE.currentSelection.model_name &&
         c.input_tokens === inputTokens &&
         c.output_tokens === outputTokens &&
-        c.random_tokens === randomTokens
+        c.random_tokens === randomTokens &&
+        c.image_count === imageCount &&
+        c.image_size === imageSize
     );
 
     if (currentModelCheckbox) {

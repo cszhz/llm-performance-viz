@@ -127,6 +127,10 @@ function addCurrentToChart() {
     const inputTokens = parseInt(document.getElementById('input-tokens').value);
     const outputTokens = parseInt(document.getElementById('output-tokens').value);
     const randomTokens = parseInt(document.getElementById('random-tokens').value);
+    const imageCountSlider = document.getElementById('image-count');
+    const imageSizeSelect = document.getElementById('image-size');
+    const imageCount = imageCountSlider && !imageCountSlider.disabled ? parseInt(imageCountSlider.value) : 0;
+    const imageSize = imageSizeSelect && !imageSizeSelect.disabled ? imageSizeSelect.value : '';
 
     const combination = {
         runtime: STATE.currentSelection.runtime,
@@ -134,7 +138,9 @@ function addCurrentToChart() {
         model_name: STATE.currentSelection.model_name,
         input_tokens: inputTokens,
         output_tokens: outputTokens,
-        random_tokens: randomTokens
+        random_tokens: randomTokens,
+        image_count: imageCount,
+        image_size: imageSize
     };
 
     const exists = STATE.selectedCombinations.some(c =>
@@ -143,7 +149,9 @@ function addCurrentToChart() {
         c.model_name === combination.model_name &&
         c.input_tokens === combination.input_tokens &&
         c.output_tokens === combination.output_tokens &&
-        c.random_tokens === combination.random_tokens
+        c.random_tokens === combination.random_tokens &&
+        c.image_count === combination.image_count &&
+        c.image_size === combination.image_size
     );
 
     if (exists) {
@@ -539,7 +547,9 @@ function restoreStateFromUrl() {
                 model_name: combo.m,
                 input_tokens: combo.it,
                 output_tokens: combo.ot,
-                random_tokens: combo.rt
+                random_tokens: combo.rt,
+                image_count: combo.ic || 0,
+                image_size: combo.is || ''
             }));
 
             STATE.selectedCombinations = combinations;
