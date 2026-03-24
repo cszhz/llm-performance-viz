@@ -1,0 +1,2019 @@
+{
+  "last_updated": "2026-03-24T11:51:40.138228",
+  "total_users": 13,
+  "sessions": {
+    "127.0.0.1_4296": {
+      "first_visit": "2026-03-24T11:22:27.681188",
+      "last_visit": "2026-03-24T11:22:27.729581",
+      "visit_count": 3,
+      "events": [
+        {
+          "timestamp": "2026-03-24T11:22:27.681188",
+          "type": "list_projects",
+          "data": {},
+          "ip": "127.0.0.1",
+          "user_agent": "curl/8.5.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:22:27.705257",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "default",
+            "reload": false
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "curl/8.5.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:22:27.729581",
+          "type": "api_combinations_access",
+          "data": {
+            "project": "project-a"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "curl/8.5.0"
+        }
+      ]
+    },
+    "127.0.0.1_7724": {
+      "first_visit": "2026-03-24T11:23:16.674534",
+      "last_visit": "2026-03-24T11:24:41.638545",
+      "visit_count": 9,
+      "events": [
+        {
+          "timestamp": "2026-03-24T11:23:16.674534",
+          "type": "page_visit",
+          "data": {
+            "page": "index"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:23:17.046149",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "default",
+            "reload": false
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:23:17.249084",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "default",
+            "reload": false
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:24:22.559154",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "default",
+            "reload": true
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:24:22.763050",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "default",
+            "reload": true
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:24:24.457007",
+          "type": "comparison_generated",
+          "data": {
+            "project": "default",
+            "combinations_count": 1,
+            "combinations": [
+              "test-model-instance-x1-model-1"
+            ]
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:24:24.465632",
+          "type": "chart_added_successfully",
+          "data": {
+            "runtime": "test-model",
+            "instance_type": "instance-x1",
+            "model_name": "model-1",
+            "input_tokens": 1600,
+            "output_tokens": 400,
+            "random_tokens": 1600,
+            "image_count": 0,
+            "image_size": "",
+            "timestamp": "2026-03-24T11:24:24.191Z",
+            "client_id": "127.0.0.1_7724"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:24:41.436180",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "default",
+            "reload": true
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:24:41.638545",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "default",
+            "reload": true
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        }
+      ]
+    },
+    "127.0.0.1_7243": {
+      "first_visit": "2026-03-24T11:24:06.854379",
+      "last_visit": "2026-03-24T11:24:06.854379",
+      "visit_count": 1,
+      "events": [
+        {
+          "timestamp": "2026-03-24T11:24:06.854379",
+          "type": "list_projects",
+          "data": {},
+          "ip": "127.0.0.1",
+          "user_agent": "curl/8.5.0"
+        }
+      ]
+    },
+    "127.0.0.1_424": {
+      "first_visit": "2026-03-24T11:25:45.956084",
+      "last_visit": "2026-03-24T11:26:24.662047",
+      "visit_count": 12,
+      "events": [
+        {
+          "timestamp": "2026-03-24T11:25:45.956084",
+          "type": "page_visit",
+          "data": {
+            "page": "index"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:25:46.636307",
+          "type": "list_projects",
+          "data": {},
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:25:46.835164",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "default",
+            "reload": false
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:25:47.037389",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "default",
+            "reload": false
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:25:47.567764",
+          "type": "comparison_generated",
+          "data": {
+            "project": "default",
+            "combinations_count": 1,
+            "combinations": [
+              "test-model-instance-x1-model-1"
+            ]
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:25:47.750950",
+          "type": "comparison_generated",
+          "data": {
+            "project": "default",
+            "combinations_count": 1,
+            "combinations": [
+              "test-model-instance-x1-model-1"
+            ]
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:25:53.905270",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "default",
+            "reload": false
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:25:54.116891",
+          "type": "project_switched",
+          "data": {
+            "project": "dd",
+            "timestamp": "2026-03-24T11:25:53.878Z",
+            "client_id": "127.0.0.1_424"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:26:19.420855",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "default",
+            "reload": false
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:26:19.683388",
+          "type": "project_switched",
+          "data": {
+            "project": "default",
+            "timestamp": "2026-03-24T11:26:19.392Z",
+            "client_id": "127.0.0.1_424"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:26:24.455930",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "default",
+            "reload": false
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:26:24.662047",
+          "type": "project_switched",
+          "data": {
+            "project": "dd",
+            "timestamp": "2026-03-24T11:26:24.424Z",
+            "client_id": "127.0.0.1_424"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        }
+      ]
+    },
+    "127.0.0.1_6227": {
+      "first_visit": "2026-03-24T11:27:34.028865",
+      "last_visit": "2026-03-24T11:28:07.023973",
+      "visit_count": 5,
+      "events": [
+        {
+          "timestamp": "2026-03-24T11:27:34.028865",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "default",
+            "reload": false
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "curl/8.5.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:27:34.045371",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "project-a",
+            "reload": false
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "curl/8.5.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:28:06.982800",
+          "type": "list_projects",
+          "data": {},
+          "ip": "127.0.0.1",
+          "user_agent": "curl/8.5.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:28:07.007458",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "dd",
+            "reload": false
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "curl/8.5.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:28:07.023973",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "default",
+            "reload": false
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "curl/8.5.0"
+        }
+      ]
+    },
+    "127.0.0.1_5519": {
+      "first_visit": "2026-03-24T11:28:56.224325",
+      "last_visit": "2026-03-24T11:31:39.229772",
+      "visit_count": 31,
+      "events": [
+        {
+          "timestamp": "2026-03-24T11:28:56.224325",
+          "type": "page_visit",
+          "data": {
+            "page": "index"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:28:56.927429",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "default",
+            "reload": false
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:28:57.125153",
+          "type": "list_projects",
+          "data": {},
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:28:57.333549",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "default",
+            "reload": false
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:28:57.650962",
+          "type": "comparison_generated",
+          "data": {
+            "project": "default",
+            "combinations_count": 1,
+            "combinations": [
+              "test-model-instance-x1-model-1"
+            ]
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:28:58.046414",
+          "type": "comparison_generated",
+          "data": {
+            "project": "default",
+            "combinations_count": 1,
+            "combinations": [
+              "test-model-instance-x1-model-1"
+            ]
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:29:03.927119",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "default",
+            "reload": false
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:29:04.138291",
+          "type": "project_switched",
+          "data": {
+            "project": "default",
+            "timestamp": "2026-03-24T11:29:03.898Z",
+            "client_id": "127.0.0.1_5519"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:29:11.613033",
+          "type": "page_visit",
+          "data": {
+            "page": "index"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:29:12.110255",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "default",
+            "reload": false
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:29:12.310475",
+          "type": "list_projects",
+          "data": {},
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:29:12.519168",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "default",
+            "reload": false
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:29:15.596427",
+          "type": "comparison_generated",
+          "data": {
+            "project": "default",
+            "combinations_count": 1,
+            "combinations": [
+              "test-model-instance-x1-model-1"
+            ]
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:29:15.601047",
+          "type": "chart_added_successfully",
+          "data": {
+            "runtime": "test-model",
+            "instance_type": "instance-x1",
+            "model_name": "model-1",
+            "input_tokens": 1600,
+            "output_tokens": 400,
+            "random_tokens": 1600,
+            "image_count": 0,
+            "image_size": "",
+            "timestamp": "2026-03-24T11:29:15.341Z",
+            "client_id": "127.0.0.1_5519"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:29:19.345057",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "default",
+            "reload": false
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:29:19.557227",
+          "type": "project_switched",
+          "data": {
+            "project": "dd",
+            "timestamp": "2026-03-24T11:29:19.320Z",
+            "client_id": "127.0.0.1_5519"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:29:28.905401",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "default",
+            "reload": true
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:29:29.109098",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "default",
+            "reload": true
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:29:30.244927",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "default",
+            "reload": true
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:29:30.454049",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "default",
+            "reload": true
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:29:31.240810",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "default",
+            "reload": true
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:29:31.447122",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "default",
+            "reload": true
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:29:59.330331",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "default",
+            "reload": false
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:29:59.549044",
+          "type": "project_switched",
+          "data": {
+            "project": "default",
+            "timestamp": "2026-03-24T11:29:59.304Z",
+            "client_id": "127.0.0.1_5519"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:30:06.979483",
+          "type": "page_visit",
+          "data": {
+            "page": "index"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:31:37.419035",
+          "type": "page_visit",
+          "data": {
+            "page": "index"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:31:38.109126",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "default",
+            "reload": false
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:31:38.309953",
+          "type": "list_projects",
+          "data": {},
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:31:38.517037",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "default",
+            "reload": false
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:31:38.826293",
+          "type": "comparison_generated",
+          "data": {
+            "project": "default",
+            "combinations_count": 1,
+            "combinations": [
+              "test-model-instance-x1-model-1"
+            ]
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:31:39.229772",
+          "type": "comparison_generated",
+          "data": {
+            "project": "default",
+            "combinations_count": 1,
+            "combinations": [
+              "test-model-instance-x1-model-1"
+            ]
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        }
+      ]
+    },
+    "127.0.0.1_8050": {
+      "first_visit": "2026-03-24T11:32:04.158763",
+      "last_visit": "2026-03-24T11:32:09.633539",
+      "visit_count": 6,
+      "events": [
+        {
+          "timestamp": "2026-03-24T11:32:04.158763",
+          "type": "page_visit",
+          "data": {
+            "page": "index"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:32:04.686285",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "default",
+            "reload": false
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:32:04.884357",
+          "type": "list_projects",
+          "data": {},
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:32:05.090016",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "default",
+            "reload": false
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:32:09.425204",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "default",
+            "reload": false
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:32:09.633539",
+          "type": "project_switched",
+          "data": {
+            "project": "dd",
+            "timestamp": "2026-03-24T11:32:09.394Z",
+            "client_id": "127.0.0.1_8050"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        }
+      ]
+    },
+    "127.0.0.1_8499": {
+      "first_visit": "2026-03-24T11:33:17.810288",
+      "last_visit": "2026-03-24T11:33:33.205495",
+      "visit_count": 8,
+      "events": [
+        {
+          "timestamp": "2026-03-24T11:33:17.810288",
+          "type": "page_visit",
+          "data": {
+            "page": "index"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:33:18.529516",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "default",
+            "reload": false
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:33:18.731068",
+          "type": "list_projects",
+          "data": {},
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:33:18.938931",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "default",
+            "reload": false
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:33:26.243356",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "default",
+            "reload": false
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:33:26.457550",
+          "type": "project_switched",
+          "data": {
+            "project": "default",
+            "timestamp": "2026-03-24T11:33:26.217Z",
+            "client_id": "127.0.0.1_8499"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:33:32.991113",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "default",
+            "reload": false
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:33:33.205495",
+          "type": "project_switched",
+          "data": {
+            "project": "dd",
+            "timestamp": "2026-03-24T11:33:32.965Z",
+            "client_id": "127.0.0.1_8499"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        }
+      ]
+    },
+    "127.0.0.1_4351": {
+      "first_visit": "2026-03-24T11:34:50.386420",
+      "last_visit": "2026-03-24T11:37:46.986019",
+      "visit_count": 4,
+      "events": [
+        {
+          "timestamp": "2026-03-24T11:34:50.386420",
+          "type": "list_projects",
+          "data": {},
+          "ip": "127.0.0.1",
+          "user_agent": "curl/8.5.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:37:03.202448",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "dd",
+            "reload": false
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "curl/8.5.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:37:09.672392",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "default",
+            "reload": false
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "curl/8.5.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:37:46.986019",
+          "type": "page_visit",
+          "data": {
+            "page": "index"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "curl/8.5.0"
+        }
+      ]
+    },
+    "127.0.0.1_2088": {
+      "first_visit": "2026-03-24T11:39:00.238906",
+      "last_visit": "2026-03-24T11:42:30.333062",
+      "visit_count": 37,
+      "events": [
+        {
+          "timestamp": "2026-03-24T11:39:00.238906",
+          "type": "page_visit",
+          "data": {
+            "page": "index"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:39:00.991357",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "default",
+            "reload": false
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:39:01.191074",
+          "type": "list_projects",
+          "data": {},
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:39:02.019137",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "default",
+            "reload": false
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:39:08.855341",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "default",
+            "reload": false
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:39:09.073480",
+          "type": "project_switched",
+          "data": {
+            "project": "default",
+            "timestamp": "2026-03-24T11:39:08.804Z",
+            "client_id": "127.0.0.1_2088"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:39:14.029227",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "default",
+            "reload": false
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:39:14.241256",
+          "type": "project_switched",
+          "data": {
+            "project": "project-a",
+            "timestamp": "2026-03-24T11:39:13.971Z",
+            "client_id": "127.0.0.1_2088"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:39:19.210261",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "default",
+            "reload": false
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:39:19.424781",
+          "type": "project_switched",
+          "data": {
+            "project": "dd",
+            "timestamp": "2026-03-24T11:39:19.154Z",
+            "client_id": "127.0.0.1_2088"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:40:20.467669",
+          "type": "page_visit",
+          "data": {
+            "page": "index"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:40:20.961289",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "default",
+            "reload": false
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:40:21.160866",
+          "type": "list_projects",
+          "data": {},
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:40:21.371610",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "default",
+            "reload": false
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:40:22.339824",
+          "type": "page_visit",
+          "data": {
+            "page": "index"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:40:22.637610",
+          "type": "list_projects",
+          "data": {},
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:40:22.639168",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "default",
+            "reload": false
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:40:22.859092",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "default",
+            "reload": false
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:40:27.837316",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "default",
+            "reload": false
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:40:28.050303",
+          "type": "project_switched",
+          "data": {
+            "project": "default",
+            "timestamp": "2026-03-24T11:40:27.775Z",
+            "client_id": "127.0.0.1_2088"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:40:33.024421",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "default",
+            "reload": false
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:40:33.234530",
+          "type": "project_switched",
+          "data": {
+            "project": "dd",
+            "timestamp": "2026-03-24T11:40:32.963Z",
+            "client_id": "127.0.0.1_2088"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:41:30.219156",
+          "type": "page_visit",
+          "data": {
+            "page": "index"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:41:30.954434",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "default",
+            "reload": false
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:41:31.152953",
+          "type": "list_projects",
+          "data": {},
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:41:31.370518",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "default",
+            "reload": false
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:41:34.495240",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "default",
+            "reload": false
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:41:34.705794",
+          "type": "project_switched",
+          "data": {
+            "project": "default",
+            "timestamp": "2026-03-24T11:41:34.435Z",
+            "client_id": "127.0.0.1_2088"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:41:38.727446",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "default",
+            "reload": false
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:41:38.936500",
+          "type": "project_switched",
+          "data": {
+            "project": "dd",
+            "timestamp": "2026-03-24T11:41:38.664Z",
+            "client_id": "127.0.0.1_2088"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:42:23.475131",
+          "type": "page_visit",
+          "data": {
+            "page": "index"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:42:25.373314",
+          "type": "list_projects",
+          "data": {},
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:42:25.577090",
+          "type": "list_projects",
+          "data": {},
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:42:25.582629",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "default",
+            "reload": false
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:42:25.787674",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "default",
+            "reload": false
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:42:30.120237",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "default",
+            "reload": false
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:42:30.333062",
+          "type": "project_switched",
+          "data": {
+            "project": "dd",
+            "timestamp": "2026-03-24T11:42:30.057Z",
+            "client_id": "127.0.0.1_2088"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        }
+      ]
+    },
+    "127.0.0.1_3061": {
+      "first_visit": "2026-03-24T11:45:52.341476",
+      "last_visit": "2026-03-24T11:46:01.653315",
+      "visit_count": 7,
+      "events": [
+        {
+          "timestamp": "2026-03-24T11:45:52.341476",
+          "type": "page_visit",
+          "data": {
+            "page": "index"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:45:53.849592",
+          "type": "list_projects",
+          "data": {},
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:45:54.052804",
+          "type": "list_projects",
+          "data": {},
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:45:54.057006",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "default",
+            "reload": false
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:45:54.264327",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "default",
+            "reload": false
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:46:01.436918",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "default",
+            "reload": false
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:46:01.653315",
+          "type": "project_switched",
+          "data": {
+            "project": "dd",
+            "timestamp": "2026-03-24T11:46:01.378Z",
+            "client_id": "127.0.0.1_3061"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        }
+      ]
+    },
+    "127.0.0.1_9452": {
+      "first_visit": "2026-03-24T11:47:19.191679",
+      "last_visit": "2026-03-24T11:48:01.440842",
+      "visit_count": 16,
+      "events": [
+        {
+          "timestamp": "2026-03-24T11:47:19.191679",
+          "type": "page_visit",
+          "data": {
+            "page": "index"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:47:20.768988",
+          "type": "list_projects",
+          "data": {},
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:47:20.970837",
+          "type": "list_projects",
+          "data": {},
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:47:20.978698",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "default",
+            "reload": false
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:47:21.181472",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "default",
+            "reload": false
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:47:27.186127",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "dd",
+            "reload": false
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:47:27.416106",
+          "type": "project_switched",
+          "data": {
+            "project": "dd",
+            "timestamp": "2026-03-24T11:47:27.133Z",
+            "client_id": "127.0.0.1_9452"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:47:38.056744",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "project-a",
+            "reload": false
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:47:38.272057",
+          "type": "project_switched",
+          "data": {
+            "project": "project-a",
+            "timestamp": "2026-03-24T11:47:37.996Z",
+            "client_id": "127.0.0.1_9452"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:47:44.970200",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "dd",
+            "reload": false
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:47:45.196605",
+          "type": "project_switched",
+          "data": {
+            "project": "dd",
+            "timestamp": "2026-03-24T11:47:44.918Z",
+            "client_id": "127.0.0.1_9452"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:47:48.993435",
+          "type": "model_selected",
+          "data": {
+            "project": "dd",
+            "runtime": "sglang-v0.5.9",
+            "instance_type": "g6e.8xlarge",
+            "model_name": "gpt-oss-20b-tp1"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:48:00.477004",
+          "type": "comparison_generated",
+          "data": {
+            "project": "dd",
+            "combinations_count": 1,
+            "combinations": [
+              "sglang-v0.5.9-g6e.8xlarge-gpt-oss-20b-tp1"
+            ]
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:48:00.485041",
+          "type": "chart_added_successfully",
+          "data": {
+            "runtime": "sglang-v0.5.9",
+            "instance_type": "g6e.8xlarge",
+            "model_name": "gpt-oss-20b-tp1",
+            "input_tokens": 256,
+            "output_tokens": 128,
+            "random_tokens": 100,
+            "image_count": 0,
+            "image_size": "",
+            "timestamp": "2026-03-24T11:47:59.970Z",
+            "client_id": "127.0.0.1_9452"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:48:01.434543",
+          "type": "comparison_generated",
+          "data": {
+            "project": "dd",
+            "combinations_count": 2,
+            "combinations": [
+              "sglang-v0.5.9-g6e.8xlarge-gpt-oss-20b-tp1",
+              "vllm-v0.17.0-g6e.8xlarge-gpt-oss-20b-tp1"
+            ]
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:48:01.440842",
+          "type": "chart_added_successfully",
+          "data": {
+            "runtime": "vllm-v0.17.0",
+            "instance_type": "g6e.8xlarge",
+            "model_name": "gpt-oss-20b-tp1",
+            "input_tokens": 256,
+            "output_tokens": 128,
+            "random_tokens": 100,
+            "image_count": 0,
+            "image_size": "",
+            "timestamp": "2026-03-24T11:48:01.149Z",
+            "client_id": "127.0.0.1_9452"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        }
+      ]
+    },
+    "127.0.0.1_7951": {
+      "first_visit": "2026-03-24T11:49:49.240690",
+      "last_visit": "2026-03-24T11:51:40.138205",
+      "visit_count": 39,
+      "events": [
+        {
+          "timestamp": "2026-03-24T11:49:49.240690",
+          "type": "page_visit",
+          "data": {
+            "page": "index"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:49:50.134129",
+          "type": "list_projects",
+          "data": {},
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:49:50.336642",
+          "type": "list_projects",
+          "data": {},
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:49:50.343045",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "default",
+            "reload": false
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:49:50.548132",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "default",
+            "reload": false
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:49:55.184015",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "project-a",
+            "reload": false
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:49:55.401641",
+          "type": "project_switched",
+          "data": {
+            "project": "project-a",
+            "timestamp": "2026-03-24T11:49:55.125Z",
+            "client_id": "127.0.0.1_7951"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:49:58.227577",
+          "type": "comparison_generated",
+          "data": {
+            "project": "project-a",
+            "combinations_count": 1,
+            "combinations": [
+              "sglang-v0.5.9-g6e.8xlarge-gpt-oss-20b-tp1"
+            ]
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:49:58.232106",
+          "type": "chart_added_successfully",
+          "data": {
+            "runtime": "sglang-v0.5.9",
+            "instance_type": "g6e.8xlarge",
+            "model_name": "gpt-oss-20b-tp1",
+            "input_tokens": 1600,
+            "output_tokens": 400,
+            "random_tokens": 1600,
+            "image_count": 0,
+            "image_size": "",
+            "timestamp": "2026-03-24T11:49:57.933Z",
+            "client_id": "127.0.0.1_7951"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:50:00.811265",
+          "type": "model_selected",
+          "data": {
+            "project": "project-a",
+            "runtime": "sglang-v0.5.9",
+            "instance_type": "g6e.8xlarge",
+            "model_name": "gpt-oss-20b-tp1"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:50:03.171416",
+          "type": "comparison_generated",
+          "data": {
+            "project": "project-a",
+            "combinations_count": 2,
+            "combinations": [
+              "sglang-v0.5.9-g6e.8xlarge-gpt-oss-20b-tp1",
+              "sglang-v0.5.9-p5en.48xlarge-gpt-oss-20b-tp1"
+            ]
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:50:03.177485",
+          "type": "chart_added_successfully",
+          "data": {
+            "runtime": "sglang-v0.5.9",
+            "instance_type": "p5en.48xlarge",
+            "model_name": "gpt-oss-20b-tp1",
+            "input_tokens": 256,
+            "output_tokens": 256,
+            "random_tokens": 100,
+            "image_count": 0,
+            "image_size": "",
+            "timestamp": "2026-03-24T11:50:02.889Z",
+            "client_id": "127.0.0.1_7951"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:50:10.948222",
+          "type": "model_selected",
+          "data": {
+            "project": "project-a",
+            "runtime": "sglang-v0.5.9",
+            "instance_type": "p5en.48xlarge",
+            "model_name": "gpt-oss-20b-tp1"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:50:15.001272",
+          "type": "model_selected",
+          "data": {
+            "project": "project-a",
+            "runtime": "sglang-v0.5.9",
+            "instance_type": "g6e.8xlarge",
+            "model_name": "gpt-oss-20b-tp1"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:50:16.735389",
+          "type": "comparison_generated",
+          "data": {
+            "project": "project-a",
+            "combinations_count": 1,
+            "combinations": [
+              "sglang-v0.5.9-p5en.48xlarge-gpt-oss-20b-tp1"
+            ]
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:50:16.934634",
+          "type": "chart_removed",
+          "data": {
+            "runtime": "sglang-v0.5.9",
+            "instance_type": "g6e.8xlarge",
+            "model_name": "gpt-oss-20b-tp1",
+            "input_tokens": 1600,
+            "output_tokens": 400,
+            "random_tokens": 1600,
+            "image_count": 0,
+            "image_size": "",
+            "timestamp": "2026-03-24T11:50:16.462Z",
+            "client_id": "127.0.0.1_7951"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:50:18.666521",
+          "type": "comparison_generated",
+          "data": {
+            "project": "project-a",
+            "combinations_count": 2,
+            "combinations": [
+              "sglang-v0.5.9-p5en.48xlarge-gpt-oss-20b-tp1",
+              "sglang-v0.5.9-g6e.8xlarge-gpt-oss-20b-tp1"
+            ]
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:50:18.673097",
+          "type": "chart_added_successfully",
+          "data": {
+            "runtime": "sglang-v0.5.9",
+            "instance_type": "g6e.8xlarge",
+            "model_name": "gpt-oss-20b-tp1",
+            "input_tokens": 256,
+            "output_tokens": 256,
+            "random_tokens": 100,
+            "image_count": 0,
+            "image_size": "",
+            "timestamp": "2026-03-24T11:50:18.412Z",
+            "client_id": "127.0.0.1_7951"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:50:32.037025",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "project-dd",
+            "reload": false
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:50:32.258966",
+          "type": "project_switched",
+          "data": {
+            "project": "project-dd",
+            "timestamp": "2026-03-24T11:50:32.026Z",
+            "client_id": "127.0.0.1_7951"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:50:35.579261",
+          "type": "model_selected",
+          "data": {
+            "project": "project-dd",
+            "runtime": "sglang-v0.5.9",
+            "instance_type": "g6e.8xlarge",
+            "model_name": "gpt-oss-20b-tp1"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:50:38.722827",
+          "type": "comparison_generated",
+          "data": {
+            "project": "project-dd",
+            "combinations_count": 1,
+            "combinations": [
+              "sglang-v0.5.9-g6e.8xlarge-gpt-oss-20b-tp1"
+            ]
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:50:38.921170",
+          "type": "chart_added_successfully",
+          "data": {
+            "runtime": "sglang-v0.5.9",
+            "instance_type": "g6e.8xlarge",
+            "model_name": "gpt-oss-20b-tp1",
+            "input_tokens": 256,
+            "output_tokens": 256,
+            "random_tokens": 100,
+            "image_count": 0,
+            "image_size": "",
+            "timestamp": "2026-03-24T11:50:38.472Z",
+            "client_id": "127.0.0.1_7951"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:50:40.936820",
+          "type": "comparison_generated",
+          "data": {
+            "project": "project-dd",
+            "combinations_count": 2,
+            "combinations": [
+              "sglang-v0.5.9-g6e.8xlarge-gpt-oss-20b-tp1",
+              "sglang-v0.5.9-p5en.48xlarge-gpt-oss-20b-tp1"
+            ]
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:50:40.943448",
+          "type": "chart_added_successfully",
+          "data": {
+            "runtime": "sglang-v0.5.9",
+            "instance_type": "p5en.48xlarge",
+            "model_name": "gpt-oss-20b-tp1",
+            "input_tokens": 256,
+            "output_tokens": 256,
+            "random_tokens": 100,
+            "image_count": 0,
+            "image_size": "",
+            "timestamp": "2026-03-24T11:50:40.691Z",
+            "client_id": "127.0.0.1_7951"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:50:43.622356",
+          "type": "comparison_generated",
+          "data": {
+            "project": "project-dd",
+            "combinations_count": 3,
+            "combinations": [
+              "sglang-v0.5.9-g6e.8xlarge-gpt-oss-20b-tp1",
+              "sglang-v0.5.9-p5en.48xlarge-gpt-oss-20b-tp1",
+              "vllm-v0.17.0-g6e.8xlarge-gpt-oss-20b-tp1"
+            ]
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:50:43.631087",
+          "type": "chart_added_successfully",
+          "data": {
+            "runtime": "vllm-v0.17.0",
+            "instance_type": "g6e.8xlarge",
+            "model_name": "gpt-oss-20b-tp1",
+            "input_tokens": 256,
+            "output_tokens": 256,
+            "random_tokens": 100,
+            "image_count": 0,
+            "image_size": "",
+            "timestamp": "2026-03-24T11:50:43.372Z",
+            "client_id": "127.0.0.1_7951"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:50:45.907628",
+          "type": "comparison_generated",
+          "data": {
+            "project": "project-dd",
+            "combinations_count": 4,
+            "combinations": [
+              "sglang-v0.5.9-g6e.8xlarge-gpt-oss-20b-tp1",
+              "sglang-v0.5.9-p5en.48xlarge-gpt-oss-20b-tp1",
+              "vllm-v0.17.0-g6e.8xlarge-gpt-oss-20b-tp1",
+              "vllm-v0.17.0-p5en.48xlarge-gpt-oss-20b-tp1"
+            ]
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:50:45.918295",
+          "type": "chart_added_successfully",
+          "data": {
+            "runtime": "vllm-v0.17.0",
+            "instance_type": "p5en.48xlarge",
+            "model_name": "gpt-oss-20b-tp1",
+            "input_tokens": 256,
+            "output_tokens": 256,
+            "random_tokens": 100,
+            "image_count": 0,
+            "image_size": "",
+            "timestamp": "2026-03-24T11:50:45.658Z",
+            "client_id": "127.0.0.1_7951"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:51:21.921523",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "project-a",
+            "reload": false
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:51:22.136665",
+          "type": "project_switched",
+          "data": {
+            "project": "project-a",
+            "timestamp": "2026-03-24T11:51:21.908Z",
+            "client_id": "127.0.0.1_7951"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:51:25.688133",
+          "type": "tree_structure_access",
+          "data": {
+            "project": "project-dd",
+            "reload": false
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:51:25.909225",
+          "type": "project_switched",
+          "data": {
+            "project": "project-dd",
+            "timestamp": "2026-03-24T11:51:25.678Z",
+            "client_id": "127.0.0.1_7951"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:51:34.734612",
+          "type": "comparison_generated",
+          "data": {
+            "project": "project-dd",
+            "combinations_count": 1,
+            "combinations": [
+              "sglang-v0.5.9-g6e.8xlarge-gpt-oss-20b-tp1"
+            ]
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:51:34.738785",
+          "type": "chart_added_successfully",
+          "data": {
+            "runtime": "sglang-v0.5.9",
+            "instance_type": "g6e.8xlarge",
+            "model_name": "gpt-oss-20b-tp1",
+            "input_tokens": 1600,
+            "output_tokens": 400,
+            "random_tokens": 1600,
+            "image_count": 0,
+            "image_size": "",
+            "timestamp": "2026-03-24T11:51:34.262Z",
+            "client_id": "127.0.0.1_7951"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:51:36.108707",
+          "type": "model_selected",
+          "data": {
+            "project": "project-dd",
+            "runtime": "sglang-v0.5.9",
+            "instance_type": "g6e.8xlarge",
+            "model_name": "gpt-oss-20b-tp1"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:51:39.259401",
+          "type": "chart_removed",
+          "data": {
+            "runtime": "sglang-v0.5.9",
+            "instance_type": "g6e.8xlarge",
+            "model_name": "gpt-oss-20b-tp1",
+            "input_tokens": 1600,
+            "output_tokens": 400,
+            "random_tokens": 1600,
+            "image_count": 0,
+            "image_size": "",
+            "timestamp": "2026-03-24T11:51:39.012Z",
+            "client_id": "127.0.0.1_7951"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:51:39.786036",
+          "type": "comparison_generated",
+          "data": {
+            "project": "project-dd",
+            "combinations_count": 1,
+            "combinations": [
+              "sglang-v0.5.9-g6e.8xlarge-gpt-oss-20b-tp1"
+            ]
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        },
+        {
+          "timestamp": "2026-03-24T11:51:40.138205",
+          "type": "chart_added_successfully",
+          "data": {
+            "runtime": "sglang-v0.5.9",
+            "instance_type": "g6e.8xlarge",
+            "model_name": "gpt-oss-20b-tp1",
+            "input_tokens": 256,
+            "output_tokens": 256,
+            "random_tokens": 100,
+            "image_count": 0,
+            "image_size": "",
+            "timestamp": "2026-03-24T11:51:39.543Z",
+            "client_id": "127.0.0.1_7951"
+          },
+          "ip": "127.0.0.1",
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:148.0) Gecko/20100101 Firefox/148.0"
+        }
+      ]
+    }
+  }
+}

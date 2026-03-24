@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "processes": 32,
+    "requests_per_process": 5,
+    "total_requests": 160,
+    "model_id": "/fsx/models/gpt-oss-20b",
+    "input_tokens": 128,
+    "random_tokens": 100,
+    "output_tokens": 256,
+    "url": "http://10.0.152.18:8000/v1/chat/completions",
+    "output_file": "test_results/20260318_114330/test_in:128_out:256_proc:32_rand:100.json",
+    "total_test_duration": 22.325153350830078,
+    "requests_per_second": 7.166804074564218
+  },
+  "statistics": {
+    "total_requests": 160,
+    "successful_requests": 160,
+    "failed_requests": 0,
+    "success_rate": 1.0,
+    "first_token_latency": {
+      "min": 0.10293292999267578,
+      "max": 0.19490861892700195,
+      "mean": 0.14065082669258117,
+      "p25": 0.10810410976409912,
+      "p50": 0.14375507831573486,
+      "p75": 0.1619091033935547,
+      "p90": 0.18687875270843507
+    },
+    "end_to_end_latency": {
+      "min": 1.4501781463623047,
+      "max": 4.600210428237915,
+      "mean": 4.151974627375603,
+      "p25": 4.2852742075920105,
+      "p50": 4.496409177780151,
+      "p75": 4.517018377780914,
+      "p90": 4.543391585350037
+    },
+    "token_usage": {
+      "prompt_tokens": {
+        "min": 0,
+        "max": 190,
+        "mean": 147.25,
+        "p25": 190.0,
+        "p50": 190.0,
+        "p75": 190.0,
+        "p90": 190.0
+      },
+      "completion_tokens": {
+        "min": 0,
+        "max": 256,
+        "mean": 198.4,
+        "p25": 256.0,
+        "p50": 256.0,
+        "p75": 256.0,
+        "p90": 256.0
+      },
+      "total_tokens": {
+        "min": 0,
+        "max": 446,
+        "mean": 345.65,
+        "p25": 446.0,
+        "p50": 446.0,
+        "p75": 446.0,
+        "p90": 446.0
+      }
+    },
+    "output_tokens_per_second": {
+      "min": 57.01822111778761,
+      "max": 62.10484024662591,
+      "mean": 58.904408666347436,
+      "p25": 58.16730341317981,
+      "p50": 58.62526270204354,
+      "p75": 59.75017692183198,
+      "p90": 60.02978786017357
+    },
+    "error_messages": []
+  }
+}

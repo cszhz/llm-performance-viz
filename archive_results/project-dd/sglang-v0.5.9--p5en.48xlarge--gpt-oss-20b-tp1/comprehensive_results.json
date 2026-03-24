@@ -1,0 +1,1947 @@
+{
+  "test_matrix": {
+    "input_tokens": [
+      128,
+      256
+    ],
+    "output_tokens": [
+      128,
+      256
+    ],
+    "processing_num": [
+      1,
+      16,
+      32,
+      48,
+      64,
+      128
+    ],
+    "random_tokens": [
+      100
+    ]
+  },
+  "test_config": {
+    "requests_per_process": 5,
+    "warmup_requests": 1,
+    "cooldown_seconds": 5
+  },
+  "deployment_config": {
+    "docker_image": "sglang",
+    "container_name": "sglang",
+    "port": 8000,
+    "docker_params": {
+      "gpus": "all",
+      "shm-size": "1000g",
+      "ipc": "host",
+      "network": "host",
+      "volume": [
+        "/opt/dlami/nvme/:/vllm-workspace/"
+      ]
+    },
+    "app_args": {
+      "model": "/fsx/models/gpt-oss-20b",
+      "trust-remote-code": true,
+      "max-model-len": 32768,
+      "gpu-memory-utilization": 0.9,
+      "tensor-parallel-size": 1
+    }
+  },
+  "results": {
+    "in:128_out:128_proc:1_rand:100": {
+      "metadata": {
+        "processes": 1,
+        "requests_per_process": 5,
+        "total_requests": 5,
+        "model_id": "/fsx/models/gpt-oss-20b",
+        "input_tokens": 128,
+        "random_tokens": 100,
+        "output_tokens": 128,
+        "url": "http://10.0.137.6:31675/v1/chat/completions",
+        "output_file": "archive_results/sglang-v0.5.9--p5en.48xlarge--gpt-oss-20b-tp1/test_in:128_out:128_proc:1_rand:100.json",
+        "total_test_duration": 2.0685155391693115,
+        "requests_per_second": 2.417192380390787
+      },
+      "statistics": {
+        "total_requests": 5,
+        "successful_requests": 5,
+        "failed_requests": 0,
+        "success_rate": 1.0,
+        "first_token_latency": {
+          "min": 0.018158912658691406,
+          "max": 0.019740581512451172,
+          "mean": 0.018819856643676757,
+          "p25": 0.018618106842041016,
+          "p50": 0.018764972686767578,
+          "p75": 0.018816709518432617,
+          "p90": 0.01937103271484375
+        },
+        "end_to_end_latency": {
+          "min": 0.41205358505249023,
+          "max": 0.4128255844116211,
+          "mean": 0.41245508193969727,
+          "p25": 0.41219353675842285,
+          "p50": 0.41258788108825684,
+          "p75": 0.4126148223876953,
+          "p90": 0.41274127960205076
+        },
+        "token_usage": {
+          "prompt_tokens": {
+            "min": 190,
+            "max": 190,
+            "mean": 190,
+            "p25": 190.0,
+            "p50": 190.0,
+            "p75": 190.0,
+            "p90": 190.0
+          },
+          "completion_tokens": {
+            "min": 128,
+            "max": 128,
+            "mean": 128,
+            "p25": 128.0,
+            "p50": 128.0,
+            "p75": 128.0,
+            "p90": 128.0
+          },
+          "total_tokens": {
+            "min": 318,
+            "max": 318,
+            "mean": 318,
+            "p25": 318.0,
+            "p50": 318.0,
+            "p75": 318.0,
+            "p90": 318.0
+          }
+        },
+        "output_tokens_per_second": {
+          "min": 324.87580466941233,
+          "max": 325.629314412774,
+          "mean": 325.1744036150673,
+          "p25": 324.95996765356387,
+          "p50": 325.01918316419597,
+          "p75": 325.3877481753904,
+          "p90": 325.53268791782057
+        },
+        "error_messages": []
+      }
+    },
+    "in:128_out:128_proc:16_rand:100": {
+      "metadata": {
+        "processes": 16,
+        "requests_per_process": 5,
+        "total_requests": 80,
+        "model_id": "/fsx/models/gpt-oss-20b",
+        "input_tokens": 128,
+        "random_tokens": 100,
+        "output_tokens": 128,
+        "url": "http://10.0.137.6:31675/v1/chat/completions",
+        "output_file": "archive_results/sglang-v0.5.9--p5en.48xlarge--gpt-oss-20b-tp1/test_in:128_out:128_proc:16_rand:100.json",
+        "total_test_duration": 3.6318020820617676,
+        "requests_per_second": 22.027632065947863
+      },
+      "statistics": {
+        "total_requests": 80,
+        "successful_requests": 80,
+        "failed_requests": 0,
+        "success_rate": 1.0,
+        "first_token_latency": {
+          "min": 0.015894651412963867,
+          "max": 0.05369400978088379,
+          "mean": 0.0388164222240448,
+          "p25": 0.03350090980529785,
+          "p50": 0.03438234329223633,
+          "p75": 0.04495590925216675,
+          "p90": 0.05280919075012207
+        },
+        "end_to_end_latency": {
+          "min": 0.6168498992919922,
+          "max": 0.870290994644165,
+          "mean": 0.7052362203598023,
+          "p25": 0.6926226019859314,
+          "p50": 0.7071824073791504,
+          "p75": 0.7139225006103516,
+          "p90": 0.7175515651702881
+        },
+        "token_usage": {
+          "prompt_tokens": {
+            "min": 190,
+            "max": 190,
+            "mean": 190,
+            "p25": 190.0,
+            "p50": 190.0,
+            "p75": 190.0,
+            "p90": 190.0
+          },
+          "completion_tokens": {
+            "min": 128,
+            "max": 128,
+            "mean": 128,
+            "p25": 128.0,
+            "p50": 128.0,
+            "p75": 128.0,
+            "p90": 128.0
+          },
+          "total_tokens": {
+            "min": 318,
+            "max": 318,
+            "mean": 318,
+            "p25": 318.0,
+            "p50": 318.0,
+            "p75": 318.0,
+            "p90": 318.0
+          }
+        },
+        "output_tokens_per_second": {
+          "min": 153.02499752735375,
+          "max": 212.9942295233376,
+          "mean": 192.31100070173972,
+          "p25": 189.55065863082694,
+          "p50": 193.82492746143632,
+          "p75": 194.91183661724065,
+          "p90": 197.6975884428779
+        },
+        "error_messages": []
+      }
+    },
+    "in:128_out:128_proc:32_rand:100": {
+      "metadata": {
+        "processes": 32,
+        "requests_per_process": 5,
+        "total_requests": 160,
+        "model_id": "/fsx/models/gpt-oss-20b",
+        "input_tokens": 128,
+        "random_tokens": 100,
+        "output_tokens": 128,
+        "url": "http://10.0.137.6:31675/v1/chat/completions",
+        "output_file": "archive_results/sglang-v0.5.9--p5en.48xlarge--gpt-oss-20b-tp1/test_in:128_out:128_proc:32_rand:100.json",
+        "total_test_duration": 4.440388917922974,
+        "requests_per_second": 36.03287976739687
+      },
+      "statistics": {
+        "total_requests": 160,
+        "successful_requests": 160,
+        "failed_requests": 0,
+        "success_rate": 1.0,
+        "first_token_latency": {
+          "min": 0.017580032348632812,
+          "max": 0.08375740051269531,
+          "mean": 0.05816441774368286,
+          "p25": 0.045661985874176025,
+          "p50": 0.057532668113708496,
+          "p75": 0.07315456867218018,
+          "p90": 0.07625012397766114
+        },
+        "end_to_end_latency": {
+          "min": 0.6371443271636963,
+          "max": 1.0559403896331787,
+          "mean": 0.8460975378751755,
+          "p25": 0.8403416872024536,
+          "p50": 0.8451520204544067,
+          "p75": 0.8480651378631592,
+          "p90": 0.8525061130523681
+        },
+        "token_usage": {
+          "prompt_tokens": {
+            "min": 190,
+            "max": 190,
+            "mean": 190,
+            "p25": 190.0,
+            "p50": 190.0,
+            "p75": 190.0,
+            "p90": 190.0
+          },
+          "completion_tokens": {
+            "min": 128,
+            "max": 128,
+            "mean": 128,
+            "p25": 128.0,
+            "p50": 128.0,
+            "p75": 128.0,
+            "p90": 128.0
+          },
+          "total_tokens": {
+            "min": 318,
+            "max": 318,
+            "mean": 318,
+            "p25": 318.0,
+            "p50": 318.0,
+            "p75": 318.0,
+            "p90": 318.0
+          }
+        },
+        "output_tokens_per_second": {
+          "min": 126.85539001580521,
+          "max": 206.59679886525302,
+          "mean": 162.7709976022501,
+          "p25": 159.53249374139466,
+          "p50": 162.87205770566982,
+          "p75": 165.7162818495497,
+          "p90": 168.5526165571233
+        },
+        "error_messages": []
+      }
+    },
+    "in:128_out:128_proc:48_rand:100": {
+      "metadata": {
+        "processes": 48,
+        "requests_per_process": 5,
+        "total_requests": 240,
+        "model_id": "/fsx/models/gpt-oss-20b",
+        "input_tokens": 128,
+        "random_tokens": 100,
+        "output_tokens": 128,
+        "url": "http://10.0.137.6:31675/v1/chat/completions",
+        "output_file": "archive_results/sglang-v0.5.9--p5en.48xlarge--gpt-oss-20b-tp1/test_in:128_out:128_proc:48_rand:100.json",
+        "total_test_duration": 4.73324990272522,
+        "requests_per_second": 50.705119089912706
+      },
+      "statistics": {
+        "total_requests": 240,
+        "successful_requests": 240,
+        "failed_requests": 0,
+        "success_rate": 1.0,
+        "first_token_latency": {
+          "min": 0.020212411880493164,
+          "max": 0.10947394371032715,
+          "mean": 0.07162692149480183,
+          "p25": 0.05825585126876831,
+          "p50": 0.07215249538421631,
+          "p75": 0.08954894542694092,
+          "p90": 0.10214014053344726
+        },
+        "end_to_end_latency": {
+          "min": 0.91835618019104,
+          "max": 0.9542455673217773,
+          "mean": 0.9345843921105067,
+          "p25": 0.9308195114135742,
+          "p50": 0.9344027042388916,
+          "p75": 0.9375320076942444,
+          "p90": 0.9431894540786743
+        },
+        "token_usage": {
+          "prompt_tokens": {
+            "min": 190,
+            "max": 190,
+            "mean": 190,
+            "p25": 190.0,
+            "p50": 190.0,
+            "p75": 190.0,
+            "p90": 190.0
+          },
+          "completion_tokens": {
+            "min": 128,
+            "max": 128,
+            "mean": 128,
+            "p25": 128.0,
+            "p50": 128.0,
+            "p75": 128.0,
+            "p90": 128.0
+          },
+          "total_tokens": {
+            "min": 318,
+            "max": 318,
+            "mean": 318,
+            "p25": 318.0,
+            "p50": 318.0,
+            "p75": 318.0,
+            "p90": 318.0
+          }
+        },
+        "output_tokens_per_second": {
+          "min": 137.95223289674786,
+          "max": 155.25860735692098,
+          "mean": 148.45155547768857,
+          "p25": 145.50950185267655,
+          "p50": 148.43424029119706,
+          "p75": 151.9521896014561,
+          "p90": 154.23317451564319
+        },
+        "error_messages": []
+      }
+    },
+    "in:128_out:128_proc:64_rand:100": {
+      "metadata": {
+        "processes": 64,
+        "requests_per_process": 5,
+        "total_requests": 320,
+        "model_id": "/fsx/models/gpt-oss-20b",
+        "input_tokens": 128,
+        "random_tokens": 100,
+        "output_tokens": 128,
+        "url": "http://10.0.137.6:31675/v1/chat/completions",
+        "output_file": "archive_results/sglang-v0.5.9--p5en.48xlarge--gpt-oss-20b-tp1/test_in:128_out:128_proc:64_rand:100.json",
+        "total_test_duration": 5.651960849761963,
+        "requests_per_second": 56.61751885869434
+      },
+      "statistics": {
+        "total_requests": 320,
+        "successful_requests": 320,
+        "failed_requests": 0,
+        "success_rate": 1.0,
+        "first_token_latency": {
+          "min": 0.018359899520874023,
+          "max": 0.3929307460784912,
+          "mean": 0.12876285687088967,
+          "p25": 0.05403381586074829,
+          "p50": 0.07917439937591553,
+          "p75": 0.10726791620254517,
+          "p90": 0.38122799396514895
+        },
+        "end_to_end_latency": {
+          "min": 0.9785571098327637,
+          "max": 1.4427638053894043,
+          "mean": 1.095494458079338,
+          "p25": 1.028233528137207,
+          "p50": 1.069761872291565,
+          "p75": 1.0824615955352783,
+          "p90": 1.3649076461791991
+        },
+        "token_usage": {
+          "prompt_tokens": {
+            "min": 190,
+            "max": 190,
+            "mean": 190,
+            "p25": 190.0,
+            "p50": 190.0,
+            "p75": 190.0,
+            "p90": 190.0
+          },
+          "completion_tokens": {
+            "min": 128,
+            "max": 128,
+            "mean": 128,
+            "p25": 128.0,
+            "p50": 128.0,
+            "p75": 128.0,
+            "p90": 128.0
+          },
+          "total_tokens": {
+            "min": 318,
+            "max": 318,
+            "mean": 318,
+            "p25": 318.0,
+            "p50": 318.0,
+            "p75": 318.0,
+            "p90": 318.0
+          }
+        },
+        "output_tokens_per_second": {
+          "min": 107.79559851282605,
+          "max": 189.47852360386574,
+          "mean": 133.6123963516071,
+          "p25": 126.91110055107991,
+          "p50": 130.00241618227048,
+          "p75": 135.93286135562676,
+          "p90": 140.75187090278604
+        },
+        "error_messages": []
+      }
+    },
+    "in:128_out:128_proc:128_rand:100": {
+      "metadata": {
+        "processes": 128,
+        "requests_per_process": 5,
+        "total_requests": 640,
+        "model_id": "/fsx/models/gpt-oss-20b",
+        "input_tokens": 128,
+        "random_tokens": 100,
+        "output_tokens": 128,
+        "url": "http://10.0.137.6:31675/v1/chat/completions",
+        "output_file": "archive_results/sglang-v0.5.9--p5en.48xlarge--gpt-oss-20b-tp1/test_in:128_out:128_proc:128_rand:100.json",
+        "total_test_duration": 8.252707481384277,
+        "requests_per_second": 77.55030714994504
+      },
+      "statistics": {
+        "total_requests": 640,
+        "successful_requests": 640,
+        "failed_requests": 0,
+        "success_rate": 1.0,
+        "first_token_latency": {
+          "min": 0.020468950271606445,
+          "max": 1.062849998474121,
+          "mean": 0.1560876950621605,
+          "p25": 0.08393746614456177,
+          "p50": 0.11666715145111084,
+          "p75": 0.15834951400756836,
+          "p90": 0.28381946086883547
+        },
+        "end_to_end_latency": {
+          "min": 0.8029634952545166,
+          "max": 2.542499542236328,
+          "mean": 1.5478025879710913,
+          "p25": 1.5261630415916443,
+          "p50": 1.5323463678359985,
+          "p75": 1.5387181043624878,
+          "p90": 1.6221752643585206
+        },
+        "token_usage": {
+          "prompt_tokens": {
+            "min": 190,
+            "max": 190,
+            "mean": 190,
+            "p25": 190.0,
+            "p50": 190.0,
+            "p75": 190.0,
+            "p90": 190.0
+          },
+          "completion_tokens": {
+            "min": 128,
+            "max": 128,
+            "mean": 128,
+            "p25": 128.0,
+            "p50": 128.0,
+            "p75": 128.0,
+            "p90": 128.0
+          },
+          "total_tokens": {
+            "min": 318,
+            "max": 318,
+            "mean": 318,
+            "p25": 318.0,
+            "p50": 318.0,
+            "p75": 318.0,
+            "p90": 318.0
+          }
+        },
+        "output_tokens_per_second": {
+          "min": 84.82328451846156,
+          "max": 165.04469329044213,
+          "mean": 92.54985585104372,
+          "p25": 88.38383721544014,
+          "p50": 90.28170670580123,
+          "p75": 92.60528768522381,
+          "p90": 98.4200796646237
+        },
+        "error_messages": []
+      }
+    },
+    "in:128_out:256_proc:1_rand:100": {
+      "metadata": {
+        "processes": 1,
+        "requests_per_process": 5,
+        "total_requests": 5,
+        "model_id": "/fsx/models/gpt-oss-20b",
+        "input_tokens": 128,
+        "random_tokens": 100,
+        "output_tokens": 256,
+        "url": "http://10.0.137.6:31675/v1/chat/completions",
+        "output_file": "archive_results/sglang-v0.5.9--p5en.48xlarge--gpt-oss-20b-tp1/test_in:128_out:256_proc:1_rand:100.json",
+        "total_test_duration": 4.134024620056152,
+        "requests_per_second": 1.2094751385230225
+      },
+      "statistics": {
+        "total_requests": 5,
+        "successful_requests": 5,
+        "failed_requests": 0,
+        "success_rate": 1.0,
+        "first_token_latency": {
+          "min": 0.03491568565368652,
+          "max": 0.03765225410461426,
+          "mean": 0.035574722290039065,
+          "p25": 0.03503608703613281,
+          "p50": 0.03504300117492676,
+          "p75": 0.03522658348083496,
+          "p90": 0.03668198585510254
+        },
+        "end_to_end_latency": {
+          "min": 0.8244132995605469,
+          "max": 0.8274075984954834,
+          "mean": 0.8254881381988526,
+          "p25": 0.8248915672302246,
+          "p50": 0.8252952098846436,
+          "p75": 0.8254330158233643,
+          "p90": 0.8266177654266358
+        },
+        "token_usage": {
+          "prompt_tokens": {
+            "min": 190,
+            "max": 190,
+            "mean": 190,
+            "p25": 190.0,
+            "p50": 190.0,
+            "p75": 190.0,
+            "p90": 190.0
+          },
+          "completion_tokens": {
+            "min": 256,
+            "max": 256,
+            "mean": 256,
+            "p25": 256.0,
+            "p50": 256.0,
+            "p75": 256.0,
+            "p90": 256.0
+          },
+          "total_tokens": {
+            "min": 446,
+            "max": 446,
+            "mean": 446,
+            "p25": 446.0,
+            "p50": 446.0,
+            "p75": 446.0,
+            "p90": 446.0
+          }
+        },
+        "output_tokens_per_second": {
+          "min": 323.8878981890796,
+          "max": 324.25683813428367,
+          "mean": 324.08620056624324,
+          "p25": 324.0224854456592,
+          "p50": 324.1127616126827,
+          "p75": 324.1510194495111,
+          "p90": 324.21451066037463
+        },
+        "error_messages": []
+      }
+    },
+    "in:128_out:256_proc:16_rand:100": {
+      "metadata": {
+        "processes": 16,
+        "requests_per_process": 5,
+        "total_requests": 80,
+        "model_id": "/fsx/models/gpt-oss-20b",
+        "input_tokens": 128,
+        "random_tokens": 100,
+        "output_tokens": 256,
+        "url": "http://10.0.137.6:31675/v1/chat/completions",
+        "output_file": "archive_results/sglang-v0.5.9--p5en.48xlarge--gpt-oss-20b-tp1/test_in:128_out:256_proc:16_rand:100.json",
+        "total_test_duration": 6.977905988693237,
+        "requests_per_second": 11.464757497396683
+      },
+      "statistics": {
+        "total_requests": 80,
+        "successful_requests": 80,
+        "failed_requests": 0,
+        "success_rate": 1.0,
+        "first_token_latency": {
+          "min": 0.024800539016723633,
+          "max": 0.05666160583496094,
+          "mean": 0.052859637141227725,
+          "p25": 0.054716289043426514,
+          "p50": 0.05541718006134033,
+          "p75": 0.0558476448059082,
+          "p90": 0.05637953281402588
+        },
+        "end_to_end_latency": {
+          "min": 1.374265193939209,
+          "max": 1.3988399505615234,
+          "mean": 1.3909503430128098,
+          "p25": 1.3876423239707947,
+          "p50": 1.3941800594329834,
+          "p75": 1.3975074291229248,
+          "p90": 1.3984288215637206
+        },
+        "token_usage": {
+          "prompt_tokens": {
+            "min": 190,
+            "max": 190,
+            "mean": 190,
+            "p25": 190.0,
+            "p50": 190.0,
+            "p75": 190.0,
+            "p90": 190.0
+          },
+          "completion_tokens": {
+            "min": 256,
+            "max": 256,
+            "mean": 256,
+            "p25": 256.0,
+            "p50": 256.0,
+            "p75": 256.0,
+            "p90": 256.0
+          },
+          "total_tokens": {
+            "min": 446,
+            "max": 446,
+            "mean": 446,
+            "p25": 446.0,
+            "p50": 446.0,
+            "p75": 446.0,
+            "p90": 446.0
+          }
+        },
+        "output_tokens_per_second": {
+          "min": 188.9239030717545,
+          "max": 194.04135773420856,
+          "mean": 191.32140764808588,
+          "p25": 190.74963784041847,
+          "p50": 191.02859498489732,
+          "p75": 192.05486436697,
+          "p90": 192.16676335656794
+        },
+        "error_messages": []
+      }
+    },
+    "in:128_out:256_proc:32_rand:100": {
+      "metadata": {
+        "processes": 32,
+        "requests_per_process": 5,
+        "total_requests": 160,
+        "model_id": "/fsx/models/gpt-oss-20b",
+        "input_tokens": 128,
+        "random_tokens": 100,
+        "output_tokens": 256,
+        "url": "http://10.0.137.6:31675/v1/chat/completions",
+        "output_file": "archive_results/sglang-v0.5.9--p5en.48xlarge--gpt-oss-20b-tp1/test_in:128_out:256_proc:32_rand:100.json",
+        "total_test_duration": 8.14786171913147,
+        "requests_per_second": 19.637053930887696
+      },
+      "statistics": {
+        "total_requests": 160,
+        "successful_requests": 160,
+        "failed_requests": 0,
+        "success_rate": 1.0,
+        "first_token_latency": {
+          "min": 0.025555849075317383,
+          "max": 0.08596539497375488,
+          "mean": 0.06416048109531403,
+          "p25": 0.054668545722961426,
+          "p50": 0.05898773670196533,
+          "p75": 0.07579368352890015,
+          "p90": 0.08444669246673583
+        },
+        "end_to_end_latency": {
+          "min": 1.605424404144287,
+          "max": 1.6394705772399902,
+          "mean": 1.6211671099066733,
+          "p25": 1.6150476336479187,
+          "p50": 1.6200631856918335,
+          "p75": 1.6239217519760132,
+          "p90": 1.6347237586975099
+        },
+        "token_usage": {
+          "prompt_tokens": {
+            "min": 190,
+            "max": 190,
+            "mean": 190,
+            "p25": 190.0,
+            "p50": 190.0,
+            "p75": 190.0,
+            "p90": 190.0
+          },
+          "completion_tokens": {
+            "min": 256,
+            "max": 256,
+            "mean": 256,
+            "p25": 256.0,
+            "p50": 256.0,
+            "p75": 256.0,
+            "p90": 256.0
+          },
+          "total_tokens": {
+            "min": 446,
+            "max": 446,
+            "mean": 446,
+            "p25": 446.0,
+            "p50": 446.0,
+            "p75": 446.0,
+            "p90": 446.0
+          }
+        },
+        "output_tokens_per_second": {
+          "min": 160.36253394895093,
+          "max": 167.87941921017975,
+          "mean": 164.43764313813833,
+          "p25": 163.18401873142864,
+          "p50": 164.50811459314306,
+          "p75": 165.81111328006136,
+          "p90": 166.9834036118297
+        },
+        "error_messages": []
+      }
+    },
+    "in:128_out:256_proc:48_rand:100": {
+      "metadata": {
+        "processes": 48,
+        "requests_per_process": 5,
+        "total_requests": 240,
+        "model_id": "/fsx/models/gpt-oss-20b",
+        "input_tokens": 128,
+        "random_tokens": 100,
+        "output_tokens": 256,
+        "url": "http://10.0.137.6:31675/v1/chat/completions",
+        "output_file": "archive_results/sglang-v0.5.9--p5en.48xlarge--gpt-oss-20b-tp1/test_in:128_out:256_proc:48_rand:100.json",
+        "total_test_duration": 8.980407476425171,
+        "requests_per_second": 26.72484524004436
+      },
+      "statistics": {
+        "total_requests": 240,
+        "successful_requests": 240,
+        "failed_requests": 0,
+        "success_rate": 1.0,
+        "first_token_latency": {
+          "min": 0.03967785835266113,
+          "max": 0.1110236644744873,
+          "mean": 0.08324449261029561,
+          "p25": 0.06493717432022095,
+          "p50": 0.09004783630371094,
+          "p75": 0.102611243724823,
+          "p90": 0.10702388286590576
+        },
+        "end_to_end_latency": {
+          "min": 1.765676498413086,
+          "max": 1.7972311973571777,
+          "mean": 1.7827823887268701,
+          "p25": 1.779689371585846,
+          "p50": 1.7838585376739502,
+          "p75": 1.787049949169159,
+          "p90": 1.788990592956543
+        },
+        "token_usage": {
+          "prompt_tokens": {
+            "min": 190,
+            "max": 190,
+            "mean": 190,
+            "p25": 190.0,
+            "p50": 190.0,
+            "p75": 190.0,
+            "p90": 190.0
+          },
+          "completion_tokens": {
+            "min": 256,
+            "max": 256,
+            "mean": 256,
+            "p25": 256.0,
+            "p50": 256.0,
+            "p75": 256.0,
+            "p90": 256.0
+          },
+          "total_tokens": {
+            "min": 446,
+            "max": 446,
+            "mean": 446,
+            "p25": 446.0,
+            "p50": 446.0,
+            "p75": 446.0,
+            "p90": 446.0
+          }
+        },
+        "output_tokens_per_second": {
+          "min": 146.1929200289025,
+          "max": 153.42132137521418,
+          "mean": 150.6562419721925,
+          "p25": 148.6093057913609,
+          "p50": 151.17146647947214,
+          "p75": 152.49463434255108,
+          "p90": 153.1451779274037
+        },
+        "error_messages": []
+      }
+    },
+    "in:128_out:256_proc:64_rand:100": {
+      "metadata": {
+        "processes": 64,
+        "requests_per_process": 5,
+        "total_requests": 320,
+        "model_id": "/fsx/models/gpt-oss-20b",
+        "input_tokens": 128,
+        "random_tokens": 100,
+        "output_tokens": 256,
+        "url": "http://10.0.137.6:31675/v1/chat/completions",
+        "output_file": "archive_results/sglang-v0.5.9--p5en.48xlarge--gpt-oss-20b-tp1/test_in:128_out:256_proc:64_rand:100.json",
+        "total_test_duration": 9.943883419036865,
+        "requests_per_second": 32.18058644848777
+      },
+      "statistics": {
+        "total_requests": 320,
+        "successful_requests": 320,
+        "failed_requests": 0,
+        "success_rate": 1.0,
+        "first_token_latency": {
+          "min": 0.040923118591308594,
+          "max": 0.13715410232543945,
+          "mean": 0.09539530128240585,
+          "p25": 0.07266783714294434,
+          "p50": 0.09462153911590576,
+          "p75": 0.11721700429916382,
+          "p90": 0.13447730541229247
+        },
+        "end_to_end_latency": {
+          "min": 1.9511735439300537,
+          "max": 1.991532802581787,
+          "mean": 1.9706989720463752,
+          "p25": 1.9652877449989319,
+          "p50": 1.9704504013061523,
+          "p75": 1.9760067462921143,
+          "p90": 1.9809431076049804
+        },
+        "token_usage": {
+          "prompt_tokens": {
+            "min": 190,
+            "max": 190,
+            "mean": 190,
+            "p25": 190.0,
+            "p50": 190.0,
+            "p75": 190.0,
+            "p90": 190.0
+          },
+          "completion_tokens": {
+            "min": 256,
+            "max": 256,
+            "mean": 256,
+            "p25": 256.0,
+            "p50": 256.0,
+            "p75": 256.0,
+            "p90": 256.0
+          },
+          "total_tokens": {
+            "min": 446,
+            "max": 446,
+            "mean": 446,
+            "p25": 446.0,
+            "p50": 446.0,
+            "p75": 446.0,
+            "p90": 446.0
+          }
+        },
+        "output_tokens_per_second": {
+          "min": 131.90960667971993,
+          "max": 140.1333706590136,
+          "mean": 136.545821712234,
+          "p25": 134.2824524524321,
+          "p50": 136.46931822295815,
+          "p75": 138.15357677748347,
+          "p90": 139.76277050923866
+        },
+        "error_messages": []
+      }
+    },
+    "in:128_out:256_proc:128_rand:100": {
+      "metadata": {
+        "processes": 128,
+        "requests_per_process": 5,
+        "total_requests": 640,
+        "model_id": "/fsx/models/gpt-oss-20b",
+        "input_tokens": 128,
+        "random_tokens": 100,
+        "output_tokens": 256,
+        "url": "http://10.0.137.6:31675/v1/chat/completions",
+        "output_file": "archive_results/sglang-v0.5.9--p5en.48xlarge--gpt-oss-20b-tp1/test_in:128_out:256_proc:128_rand:100.json",
+        "total_test_duration": 14.236355543136597,
+        "requests_per_second": 44.955325684356524
+      },
+      "statistics": {
+        "total_requests": 640,
+        "successful_requests": 640,
+        "failed_requests": 0,
+        "success_rate": 1.0,
+        "first_token_latency": {
+          "min": 0.03176403045654297,
+          "max": 0.6469419002532959,
+          "mean": 0.19312944635748863,
+          "p25": 0.0905381441116333,
+          "p50": 0.14228594303131104,
+          "p75": 0.19111281633377075,
+          "p90": 0.48587741851806643
+        },
+        "end_to_end_latency": {
+          "min": 2.5193328857421875,
+          "max": 3.2750978469848633,
+          "mean": 2.799667174741626,
+          "p25": 2.7696198225021362,
+          "p50": 2.806512475013733,
+          "p75": 2.82312273979187,
+          "p90": 2.8328361749649047
+        },
+        "token_usage": {
+          "prompt_tokens": {
+            "min": 190,
+            "max": 190,
+            "mean": 190,
+            "p25": 190.0,
+            "p50": 190.0,
+            "p75": 190.0,
+            "p90": 190.0
+          },
+          "completion_tokens": {
+            "min": 256,
+            "max": 256,
+            "mean": 256,
+            "p25": 256.0,
+            "p50": 256.0,
+            "p75": 256.0,
+            "p90": 256.0
+          },
+          "total_tokens": {
+            "min": 446,
+            "max": 446,
+            "mean": 446,
+            "p25": 446.0,
+            "p50": 446.0,
+            "p75": 446.0,
+            "p90": 446.0
+          }
+        },
+        "output_tokens_per_second": {
+          "min": 91.66749753552351,
+          "max": 109.64077518124435,
+          "mean": 98.4718677400707,
+          "p25": 95.02426846969118,
+          "p50": 96.7664648532926,
+          "p75": 99.26559088541254,
+          "p90": 109.05682451000206
+        },
+        "error_messages": []
+      }
+    },
+    "in:256_out:128_proc:1_rand:100": {
+      "metadata": {
+        "processes": 1,
+        "requests_per_process": 5,
+        "total_requests": 5,
+        "model_id": "/fsx/models/gpt-oss-20b",
+        "input_tokens": 256,
+        "random_tokens": 100,
+        "output_tokens": 128,
+        "url": "http://10.0.137.6:31675/v1/chat/completions",
+        "output_file": "archive_results/sglang-v0.5.9--p5en.48xlarge--gpt-oss-20b-tp1/test_in:256_out:128_proc:1_rand:100.json",
+        "total_test_duration": 2.2212932109832764,
+        "requests_per_second": 2.2509410172764643
+      },
+      "statistics": {
+        "total_requests": 5,
+        "successful_requests": 5,
+        "failed_requests": 0,
+        "success_rate": 1.0,
+        "first_token_latency": {
+          "min": 0.03473210334777832,
+          "max": 0.05357956886291504,
+          "mean": 0.04966740608215332,
+          "p25": 0.05323028564453125,
+          "p50": 0.0532526969909668,
+          "p75": 0.053542375564575195,
+          "p90": 0.0535646915435791
+        },
+        "end_to_end_latency": {
+          "min": 0.4279320240020752,
+          "max": 0.44724559783935547,
+          "mean": 0.4431199550628662,
+          "p25": 0.4465758800506592,
+          "p50": 0.44676876068115234,
+          "p75": 0.44707751274108887,
+          "p90": 0.44717836380004883
+        },
+        "token_usage": {
+          "prompt_tokens": {
+            "min": 318,
+            "max": 318,
+            "mean": 318,
+            "p25": 318.0,
+            "p50": 318.0,
+            "p75": 318.0,
+            "p90": 318.0
+          },
+          "completion_tokens": {
+            "min": 128,
+            "max": 128,
+            "mean": 128,
+            "p25": 128.0,
+            "p50": 128.0,
+            "p75": 128.0,
+            "p90": 128.0
+          },
+          "total_tokens": {
+            "min": 446,
+            "max": 446,
+            "mean": 446,
+            "p25": 446.0,
+            "p50": 446.0,
+            "p75": 446.0,
+            "p90": 446.0
+          }
+        },
+        "output_tokens_per_second": {
+          "min": 325.14870620868425,
+          "max": 325.5341450400194,
+          "mean": 325.325181173174,
+          "p25": 325.25685233181025,
+          "p50": 325.2726173353222,
+          "p75": 325.4135849500337,
+          "p90": 325.4859210040251
+        },
+        "error_messages": []
+      }
+    },
+    "in:256_out:128_proc:16_rand:100": {
+      "metadata": {
+        "processes": 16,
+        "requests_per_process": 5,
+        "total_requests": 80,
+        "model_id": "/fsx/models/gpt-oss-20b",
+        "input_tokens": 256,
+        "random_tokens": 100,
+        "output_tokens": 128,
+        "url": "http://10.0.137.6:31675/v1/chat/completions",
+        "output_file": "archive_results/sglang-v0.5.9--p5en.48xlarge--gpt-oss-20b-tp1/test_in:256_out:128_proc:16_rand:100.json",
+        "total_test_duration": 3.6607725620269775,
+        "requests_per_second": 21.853310645363837
+      },
+      "statistics": {
+        "total_requests": 80,
+        "successful_requests": 80,
+        "failed_requests": 0,
+        "success_rate": 1.0,
+        "first_token_latency": {
+          "min": 0.04358625411987305,
+          "max": 0.07689595222473145,
+          "mean": 0.06968324184417725,
+          "p25": 0.07289576530456543,
+          "p50": 0.07404589653015137,
+          "p75": 0.07490861415863037,
+          "p90": 0.07592988014221191
+        },
+        "end_to_end_latency": {
+          "min": 0.7142560482025146,
+          "max": 0.7403697967529297,
+          "mean": 0.7274108618497849,
+          "p25": 0.72071373462677,
+          "p50": 0.7256920337677002,
+          "p75": 0.7324774265289307,
+          "p90": 0.7392629623413086
+        },
+        "token_usage": {
+          "prompt_tokens": {
+            "min": 318,
+            "max": 318,
+            "mean": 318,
+            "p25": 318.0,
+            "p50": 318.0,
+            "p75": 318.0,
+            "p90": 318.0
+          },
+          "completion_tokens": {
+            "min": 128,
+            "max": 128,
+            "mean": 128,
+            "p25": 128.0,
+            "p50": 128.0,
+            "p75": 128.0,
+            "p90": 128.0
+          },
+          "total_tokens": {
+            "min": 446,
+            "max": 446,
+            "mean": 446,
+            "p25": 446.0,
+            "p50": 446.0,
+            "p75": 446.0,
+            "p90": 446.0
+          }
+        },
+        "output_tokens_per_second": {
+          "min": 189.43473198243655,
+          "max": 197.75751382977862,
+          "mean": 194.64200476878534,
+          "p25": 192.53044744565898,
+          "p50": 195.1625535145053,
+          "p75": 196.57381794722934,
+          "p90": 197.67512611623496
+        },
+        "error_messages": []
+      }
+    },
+    "in:256_out:128_proc:32_rand:100": {
+      "metadata": {
+        "processes": 32,
+        "requests_per_process": 5,
+        "total_requests": 160,
+        "model_id": "/fsx/models/gpt-oss-20b",
+        "input_tokens": 256,
+        "random_tokens": 100,
+        "output_tokens": 128,
+        "url": "http://10.0.137.6:31675/v1/chat/completions",
+        "output_file": "archive_results/sglang-v0.5.9--p5en.48xlarge--gpt-oss-20b-tp1/test_in:256_out:128_proc:32_rand:100.json",
+        "total_test_duration": 4.3230226039886475,
+        "requests_per_second": 37.011141198377175
+      },
+      "statistics": {
+        "total_requests": 160,
+        "successful_requests": 160,
+        "failed_requests": 0,
+        "success_rate": 1.0,
+        "first_token_latency": {
+          "min": 0.017354726791381836,
+          "max": 0.09465885162353516,
+          "mean": 0.07775740623474121,
+          "p25": 0.06684452295303345,
+          "p50": 0.08629405498504639,
+          "p75": 0.08916860818862915,
+          "p90": 0.09042377471923828
+        },
+        "end_to_end_latency": {
+          "min": 0.7368390560150146,
+          "max": 1.0545587539672852,
+          "mean": 0.8448888555169105,
+          "p25": 0.836337685585022,
+          "p50": 0.8408855199813843,
+          "p75": 0.8540400862693787,
+          "p90": 0.8559854984283447
+        },
+        "token_usage": {
+          "prompt_tokens": {
+            "min": 318,
+            "max": 318,
+            "mean": 318,
+            "p25": 318.0,
+            "p50": 318.0,
+            "p75": 318.0,
+            "p90": 318.0
+          },
+          "completion_tokens": {
+            "min": 128,
+            "max": 128,
+            "mean": 128,
+            "p25": 128.0,
+            "p50": 128.0,
+            "p75": 128.0,
+            "p90": 128.0
+          },
+          "total_tokens": {
+            "min": 446,
+            "max": 446,
+            "mean": 446,
+            "p25": 446.0,
+            "p50": 446.0,
+            "p75": 446.0,
+            "p90": 446.0
+          }
+        },
+        "output_tokens_per_second": {
+          "min": 132.56104632357116,
+          "max": 178.32498691304684,
+          "mean": 167.06771506790113,
+          "p25": 165.4672656270466,
+          "p50": 167.91646421272452,
+          "p75": 170.3572911278323,
+          "p90": 171.92826248031116
+        },
+        "error_messages": []
+      }
+    },
+    "in:256_out:128_proc:48_rand:100": {
+      "metadata": {
+        "processes": 48,
+        "requests_per_process": 5,
+        "total_requests": 240,
+        "model_id": "/fsx/models/gpt-oss-20b",
+        "input_tokens": 256,
+        "random_tokens": 100,
+        "output_tokens": 128,
+        "url": "http://10.0.137.6:31675/v1/chat/completions",
+        "output_file": "archive_results/sglang-v0.5.9--p5en.48xlarge--gpt-oss-20b-tp1/test_in:256_out:128_proc:48_rand:100.json",
+        "total_test_duration": 4.8078625202178955,
+        "requests_per_second": 49.91823268464071
+      },
+      "statistics": {
+        "total_requests": 240,
+        "successful_requests": 240,
+        "failed_requests": 0,
+        "success_rate": 1.0,
+        "first_token_latency": {
+          "min": 0.05061912536621094,
+          "max": 0.1246957778930664,
+          "mean": 0.09384666283925375,
+          "p25": 0.0849875807762146,
+          "p50": 0.08850109577178955,
+          "p75": 0.10117554664611816,
+          "p90": 0.1224400281906128
+        },
+        "end_to_end_latency": {
+          "min": 0.9319932460784912,
+          "max": 0.9609048366546631,
+          "mean": 0.9488674302895864,
+          "p25": 0.9461255669593811,
+          "p50": 0.9497214555740356,
+          "p75": 0.9519297480583191,
+          "p90": 0.9540686845779419
+        },
+        "token_usage": {
+          "prompt_tokens": {
+            "min": 318,
+            "max": 318,
+            "mean": 318,
+            "p25": 318.0,
+            "p50": 318.0,
+            "p75": 318.0,
+            "p90": 318.0
+          },
+          "completion_tokens": {
+            "min": 128,
+            "max": 128,
+            "mean": 128,
+            "p25": 128.0,
+            "p50": 128.0,
+            "p75": 128.0,
+            "p90": 128.0
+          },
+          "total_tokens": {
+            "min": 446,
+            "max": 446,
+            "mean": 446,
+            "p25": 446.0,
+            "p50": 446.0,
+            "p75": 446.0,
+            "p90": 446.0
+          }
+        },
+        "output_tokens_per_second": {
+          "min": 141.6750043673838,
+          "max": 155.54226088246406,
+          "mean": 149.78604941442094,
+          "p25": 147.599951634825,
+          "p50": 148.37797616025688,
+          "p75": 153.7844344720175,
+          "p90": 155.025811810806
+        },
+        "error_messages": []
+      }
+    },
+    "in:256_out:128_proc:64_rand:100": {
+      "metadata": {
+        "processes": 64,
+        "requests_per_process": 5,
+        "total_requests": 320,
+        "model_id": "/fsx/models/gpt-oss-20b",
+        "input_tokens": 256,
+        "random_tokens": 100,
+        "output_tokens": 128,
+        "url": "http://10.0.137.6:31675/v1/chat/completions",
+        "output_file": "archive_results/sglang-v0.5.9--p5en.48xlarge--gpt-oss-20b-tp1/test_in:256_out:128_proc:64_rand:100.json",
+        "total_test_duration": 5.364190578460693,
+        "requests_per_second": 59.65485292131942
+      },
+      "statistics": {
+        "total_requests": 320,
+        "successful_requests": 320,
+        "failed_requests": 0,
+        "success_rate": 1.0,
+        "first_token_latency": {
+          "min": 0.017971038818359375,
+          "max": 0.3799259662628174,
+          "mean": 0.14148372784256935,
+          "p25": 0.07543337345123291,
+          "p50": 0.10856759548187256,
+          "p75": 0.13508093357086182,
+          "p90": 0.37001791000366213
+        },
+        "end_to_end_latency": {
+          "min": 0.8760178089141846,
+          "max": 1.2806506156921387,
+          "mean": 1.0517600819468498,
+          "p25": 1.0436577200889587,
+          "p50": 1.0506891012191772,
+          "p75": 1.058221697807312,
+          "p90": 1.068975067138672
+        },
+        "token_usage": {
+          "prompt_tokens": {
+            "min": 318,
+            "max": 318,
+            "mean": 318,
+            "p25": 318.0,
+            "p50": 318.0,
+            "p75": 318.0,
+            "p90": 318.0
+          },
+          "completion_tokens": {
+            "min": 128,
+            "max": 128,
+            "mean": 128,
+            "p25": 128.0,
+            "p50": 128.0,
+            "p75": 128.0,
+            "p90": 128.0
+          },
+          "total_tokens": {
+            "min": 446,
+            "max": 446,
+            "mean": 446,
+            "p25": 446.0,
+            "p50": 446.0,
+            "p75": 446.0,
+            "p90": 446.0
+          }
+        },
+        "output_tokens_per_second": {
+          "min": 109.78975462327027,
+          "max": 189.9910827813597,
+          "mean": 143.0717034152861,
+          "p25": 131.43567804322404,
+          "p50": 134.3873079874645,
+          "p75": 139.98637400175784,
+          "p90": 188.7957335490254
+        },
+        "error_messages": []
+      }
+    },
+    "in:256_out:128_proc:128_rand:100": {
+      "metadata": {
+        "processes": 128,
+        "requests_per_process": 5,
+        "total_requests": 640,
+        "model_id": "/fsx/models/gpt-oss-20b",
+        "input_tokens": 256,
+        "random_tokens": 100,
+        "output_tokens": 128,
+        "url": "http://10.0.137.6:31675/v1/chat/completions",
+        "output_file": "archive_results/sglang-v0.5.9--p5en.48xlarge--gpt-oss-20b-tp1/test_in:256_out:128_proc:128_rand:100.json",
+        "total_test_duration": 8.03213906288147,
+        "requests_per_second": 79.6798953541032
+      },
+      "statistics": {
+        "total_requests": 640,
+        "successful_requests": 640,
+        "failed_requests": 0,
+        "success_rate": 1.0,
+        "first_token_latency": {
+          "min": 0.020172834396362305,
+          "max": 1.0335614681243896,
+          "mean": 0.1441700678318739,
+          "p25": 0.096260666847229,
+          "p50": 0.15234768390655518,
+          "p75": 0.18583470582962036,
+          "p90": 0.21627774238586425
+        },
+        "end_to_end_latency": {
+          "min": 0.8872294425964355,
+          "max": 2.5313026905059814,
+          "mean": 1.537865373492241,
+          "p25": 1.5022977590560913,
+          "p50": 1.5582211017608643,
+          "p75": 1.5709927082061768,
+          "p90": 1.5786280155181884
+        },
+        "token_usage": {
+          "prompt_tokens": {
+            "min": 318,
+            "max": 318,
+            "mean": 318,
+            "p25": 318.0,
+            "p50": 318.0,
+            "p75": 318.0,
+            "p90": 318.0
+          },
+          "completion_tokens": {
+            "min": 128,
+            "max": 128,
+            "mean": 128,
+            "p25": 128.0,
+            "p50": 128.0,
+            "p75": 128.0,
+            "p90": 128.0
+          },
+          "total_tokens": {
+            "min": 446,
+            "max": 446,
+            "mean": 446,
+            "p25": 446.0,
+            "p50": 446.0,
+            "p75": 446.0,
+            "p90": 446.0
+          }
+        },
+        "output_tokens_per_second": {
+          "min": 78.46129086850496,
+          "max": 147.657718070967,
+          "mean": 92.08942954849597,
+          "p25": 89.05901296031767,
+          "p50": 92.53806386753412,
+          "p75": 95.45001637220102,
+          "p90": 98.34497853113953
+        },
+        "error_messages": []
+      }
+    },
+    "in:256_out:256_proc:1_rand:100": {
+      "metadata": {
+        "processes": 1,
+        "requests_per_process": 5,
+        "total_requests": 5,
+        "model_id": "/fsx/models/gpt-oss-20b",
+        "input_tokens": 256,
+        "random_tokens": 100,
+        "output_tokens": 256,
+        "url": "http://10.0.137.6:31675/v1/chat/completions",
+        "output_file": "archive_results/sglang-v0.5.9--p5en.48xlarge--gpt-oss-20b-tp1/test_in:256_out:256_proc:1_rand:100.json",
+        "total_test_duration": 4.309616565704346,
+        "requests_per_second": 1.1601960229570496
+      },
+      "statistics": {
+        "total_requests": 5,
+        "successful_requests": 5,
+        "failed_requests": 0,
+        "success_rate": 1.0,
+        "first_token_latency": {
+          "min": 0.05722236633300781,
+          "max": 0.07403779029846191,
+          "mean": 0.07001791000366211,
+          "p25": 0.07254290580749512,
+          "p50": 0.0731055736541748,
+          "p75": 0.0731809139251709,
+          "p90": 0.07369503974914551
+        },
+        "end_to_end_latency": {
+          "min": 0.8477752208709717,
+          "max": 0.8644413948059082,
+          "mean": 0.8606109142303466,
+          "p25": 0.8633713722229004,
+          "p50": 0.8636746406555176,
+          "p75": 0.8637919425964355,
+          "p90": 0.8641816139221191
+        },
+        "token_usage": {
+          "prompt_tokens": {
+            "min": 318,
+            "max": 318,
+            "mean": 318,
+            "p25": 318.0,
+            "p50": 318.0,
+            "p75": 318.0,
+            "p90": 318.0
+          },
+          "completion_tokens": {
+            "min": 256,
+            "max": 256,
+            "mean": 256,
+            "p25": 256.0,
+            "p50": 256.0,
+            "p75": 256.0,
+            "p90": 256.0
+          },
+          "total_tokens": {
+            "min": 574,
+            "max": 574,
+            "mean": 574,
+            "p25": 574.0,
+            "p50": 574.0,
+            "p75": 574.0,
+            "p90": 574.0
+          }
+        },
+        "output_tokens_per_second": {
+          "min": 323.7111597163078,
+          "max": 323.88516264362283,
+          "mean": 323.8075821114686,
+          "p25": 323.76933516947247,
+          "p50": 323.82401572582825,
+          "p75": 323.8482373021118,
+          "p90": 323.87039250701844
+        },
+        "error_messages": []
+      }
+    },
+    "in:256_out:256_proc:16_rand:100": {
+      "metadata": {
+        "processes": 16,
+        "requests_per_process": 5,
+        "total_requests": 80,
+        "model_id": "/fsx/models/gpt-oss-20b",
+        "input_tokens": 256,
+        "random_tokens": 100,
+        "output_tokens": 256,
+        "url": "http://10.0.137.6:31675/v1/chat/completions",
+        "output_file": "archive_results/sglang-v0.5.9--p5en.48xlarge--gpt-oss-20b-tp1/test_in:256_out:256_proc:16_rand:100.json",
+        "total_test_duration": 7.760924816131592,
+        "requests_per_second": 10.308049864587625
+      },
+      "statistics": {
+        "total_requests": 80,
+        "successful_requests": 80,
+        "failed_requests": 0,
+        "success_rate": 1.0,
+        "first_token_latency": {
+          "min": 0.01650381088256836,
+          "max": 1.0460243225097656,
+          "mean": 0.08877314329147339,
+          "p25": 0.03781026601791382,
+          "p50": 0.06650066375732422,
+          "p75": 0.09339123964309692,
+          "p90": 0.09422743320465088
+        },
+        "end_to_end_latency": {
+          "min": 1.0740647315979004,
+          "max": 2.4163753986358643,
+          "mean": 1.4375531673431396,
+          "p25": 1.40840345621109,
+          "p50": 1.4128830432891846,
+          "p75": 1.4384014010429382,
+          "p90": 1.4504040718078612
+        },
+        "token_usage": {
+          "prompt_tokens": {
+            "min": 318,
+            "max": 318,
+            "mean": 318,
+            "p25": 318.0,
+            "p50": 318.0,
+            "p75": 318.0,
+            "p90": 318.0
+          },
+          "completion_tokens": {
+            "min": 256,
+            "max": 256,
+            "mean": 256,
+            "p25": 256.0,
+            "p50": 256.0,
+            "p75": 256.0,
+            "p90": 256.0
+          },
+          "total_tokens": {
+            "min": 574,
+            "max": 574,
+            "mean": 574,
+            "p25": 574.0,
+            "p50": 574.0,
+            "p75": 574.0,
+            "p90": 574.0
+          }
+        },
+        "output_tokens_per_second": {
+          "min": 183.25587869708218,
+          "max": 243.8967037634769,
+          "mean": 190.13024115962452,
+          "p25": 186.86062988710398,
+          "p50": 188.6109763418583,
+          "p75": 190.5498995220102,
+          "p90": 192.03264982914166
+        },
+        "error_messages": []
+      }
+    },
+    "in:256_out:256_proc:32_rand:100": {
+      "metadata": {
+        "processes": 32,
+        "requests_per_process": 5,
+        "total_requests": 160,
+        "model_id": "/fsx/models/gpt-oss-20b",
+        "input_tokens": 256,
+        "random_tokens": 100,
+        "output_tokens": 256,
+        "url": "http://10.0.137.6:31675/v1/chat/completions",
+        "output_file": "archive_results/sglang-v0.5.9--p5en.48xlarge--gpt-oss-20b-tp1/test_in:256_out:256_proc:32_rand:100.json",
+        "total_test_duration": 8.500191688537598,
+        "requests_per_second": 18.823104920769964
+      },
+      "statistics": {
+        "total_requests": 160,
+        "successful_requests": 160,
+        "failed_requests": 0,
+        "success_rate": 1.0,
+        "first_token_latency": {
+          "min": 0.02345561981201172,
+          "max": 0.33318471908569336,
+          "mean": 0.09663135558366776,
+          "p25": 0.03285735845565796,
+          "p50": 0.04497253894805908,
+          "p75": 0.057052433490753174,
+          "p90": 0.32942609786987304
+        },
+        "end_to_end_latency": {
+          "min": 1.5768604278564453,
+          "max": 1.9320993423461914,
+          "mean": 1.6690604031085967,
+          "p25": 1.6365352869033813,
+          "p50": 1.6467516422271729,
+          "p75": 1.649801254272461,
+          "p90": 1.923437762260437
+        },
+        "token_usage": {
+          "prompt_tokens": {
+            "min": 318,
+            "max": 318,
+            "mean": 318,
+            "p25": 318.0,
+            "p50": 318.0,
+            "p75": 318.0,
+            "p90": 318.0
+          },
+          "completion_tokens": {
+            "min": 256,
+            "max": 256,
+            "mean": 256,
+            "p25": 256.0,
+            "p50": 256.0,
+            "p75": 256.0,
+            "p90": 256.0
+          },
+          "total_tokens": {
+            "min": 574,
+            "max": 574,
+            "mean": 574,
+            "p25": 574.0,
+            "p50": 574.0,
+            "p75": 574.0,
+            "p90": 574.0
+          }
+        },
+        "output_tokens_per_second": {
+          "min": 157.0682990094126,
+          "max": 192.09828637184,
+          "mean": 163.25443240459413,
+          "p25": 159.06944000112728,
+          "p50": 160.30579250480906,
+          "p75": 161.71486326300433,
+          "p90": 166.95164224387813
+        },
+        "error_messages": []
+      }
+    },
+    "in:256_out:256_proc:48_rand:100": {
+      "metadata": {
+        "processes": 48,
+        "requests_per_process": 5,
+        "total_requests": 240,
+        "model_id": "/fsx/models/gpt-oss-20b",
+        "input_tokens": 256,
+        "random_tokens": 100,
+        "output_tokens": 256,
+        "url": "http://10.0.137.6:31675/v1/chat/completions",
+        "output_file": "archive_results/sglang-v0.5.9--p5en.48xlarge--gpt-oss-20b-tp1/test_in:256_out:256_proc:48_rand:100.json",
+        "total_test_duration": 9.104671955108643,
+        "requests_per_second": 26.360093058084942
+      },
+      "statistics": {
+        "total_requests": 240,
+        "successful_requests": 240,
+        "failed_requests": 0,
+        "success_rate": 1.0,
+        "first_token_latency": {
+          "min": 0.11001229286193848,
+          "max": 0.1468358039855957,
+          "mean": 0.12913960218429565,
+          "p25": 0.12774085998535156,
+          "p50": 0.13023102283477783,
+          "p75": 0.13296538591384888,
+          "p90": 0.13459017276763915
+        },
+        "end_to_end_latency": {
+          "min": 1.7873194217681885,
+          "max": 1.818866491317749,
+          "mean": 1.808405378460884,
+          "p25": 1.8048940300941467,
+          "p50": 1.809160828590393,
+          "p75": 1.8128467798233032,
+          "p90": 1.8148473024368286
+        },
+        "token_usage": {
+          "prompt_tokens": {
+            "min": 318,
+            "max": 318,
+            "mean": 318,
+            "p25": 318.0,
+            "p50": 318.0,
+            "p75": 318.0,
+            "p90": 318.0
+          },
+          "completion_tokens": {
+            "min": 256,
+            "max": 256,
+            "mean": 256,
+            "p25": 256.0,
+            "p50": 256.0,
+            "p75": 256.0,
+            "p90": 256.0
+          },
+          "total_tokens": {
+            "min": 574,
+            "max": 574,
+            "mean": 574,
+            "p25": 574.0,
+            "p50": 574.0,
+            "p75": 574.0,
+            "p90": 574.0
+          }
+        },
+        "output_tokens_per_second": {
+          "min": 151.4544781850996,
+          "max": 153.61227637172695,
+          "mean": 152.44908656460765,
+          "p25": 152.04850892482074,
+          "p50": 152.412893540982,
+          "p75": 152.87534176715482,
+          "p90": 153.14399441902432
+        },
+        "error_messages": []
+      }
+    },
+    "in:256_out:256_proc:64_rand:100": {
+      "metadata": {
+        "processes": 64,
+        "requests_per_process": 5,
+        "total_requests": 320,
+        "model_id": "/fsx/models/gpt-oss-20b",
+        "input_tokens": 256,
+        "random_tokens": 100,
+        "output_tokens": 256,
+        "url": "http://10.0.137.6:31675/v1/chat/completions",
+        "output_file": "archive_results/sglang-v0.5.9--p5en.48xlarge--gpt-oss-20b-tp1/test_in:256_out:256_proc:64_rand:100.json",
+        "total_test_duration": 10.258286476135254,
+        "requests_per_second": 31.194293583479453
+      },
+      "statistics": {
+        "total_requests": 320,
+        "successful_requests": 320,
+        "failed_requests": 0,
+        "success_rate": 1.0,
+        "first_token_latency": {
+          "min": 0.018799781799316406,
+          "max": 0.17312002182006836,
+          "mean": 0.1226007729768753,
+          "p25": 0.09302794933319092,
+          "p50": 0.13092076778411865,
+          "p75": 0.15337562561035156,
+          "p90": 0.15992941856384277
+        },
+        "end_to_end_latency": {
+          "min": 1.8873577117919922,
+          "max": 2.2208361625671387,
+          "mean": 1.993131835013628,
+          "p25": 1.9621068239212036,
+          "p50": 1.997192621231079,
+          "p75": 2.009461760520935,
+          "p90": 2.03750536441803
+        },
+        "token_usage": {
+          "prompt_tokens": {
+            "min": 318,
+            "max": 318,
+            "mean": 318,
+            "p25": 318.0,
+            "p50": 318.0,
+            "p75": 318.0,
+            "p90": 318.0
+          },
+          "completion_tokens": {
+            "min": 256,
+            "max": 256,
+            "mean": 256,
+            "p25": 256.0,
+            "p50": 256.0,
+            "p75": 256.0,
+            "p90": 256.0
+          },
+          "total_tokens": {
+            "min": 574,
+            "max": 574,
+            "mean": 574,
+            "p25": 574.0,
+            "p50": 574.0,
+            "p75": 574.0,
+            "p90": 574.0
+          }
+        },
+        "output_tokens_per_second": {
+          "min": 122.46228264133681,
+          "max": 140.0674891066124,
+          "mean": 136.90538051924597,
+          "p25": 135.87687399524327,
+          "p50": 136.64982158300194,
+          "p75": 138.82857645520974,
+          "p90": 139.40519932782772
+        },
+        "error_messages": []
+      }
+    },
+    "in:256_out:256_proc:128_rand:100": {
+      "metadata": {
+        "processes": 128,
+        "requests_per_process": 5,
+        "total_requests": 640,
+        "model_id": "/fsx/models/gpt-oss-20b",
+        "input_tokens": 256,
+        "random_tokens": 100,
+        "output_tokens": 256,
+        "url": "http://10.0.137.6:31675/v1/chat/completions",
+        "output_file": "archive_results/sglang-v0.5.9--p5en.48xlarge--gpt-oss-20b-tp1/test_in:256_out:256_proc:128_rand:100.json",
+        "total_test_duration": 14.756032228469849,
+        "requests_per_second": 43.37209285604589
+      },
+      "statistics": {
+        "total_requests": 640,
+        "successful_requests": 640,
+        "failed_requests": 0,
+        "success_rate": 1.0,
+        "first_token_latency": {
+          "min": 0.020624876022338867,
+          "max": 1.0592198371887207,
+          "mean": 0.228457210958004,
+          "p25": 0.1265314221382141,
+          "p50": 0.17023193836212158,
+          "p75": 0.23233217000961304,
+          "p90": 0.5762410402297974
+        },
+        "end_to_end_latency": {
+          "min": 2.495147228240967,
+          "max": 3.4377384185791016,
+          "mean": 2.8470449078828097,
+          "p25": 2.7373390197753906,
+          "p50": 2.798646330833435,
+          "p75": 2.8517150282859802,
+          "p90": 3.2175255537033083
+        },
+        "token_usage": {
+          "prompt_tokens": {
+            "min": 318,
+            "max": 318,
+            "mean": 318,
+            "p25": 318.0,
+            "p50": 318.0,
+            "p75": 318.0,
+            "p90": 318.0
+          },
+          "completion_tokens": {
+            "min": 256,
+            "max": 256,
+            "mean": 256,
+            "p25": 256.0,
+            "p50": 256.0,
+            "p75": 256.0,
+            "p90": 256.0
+          },
+          "total_tokens": {
+            "min": 574,
+            "max": 574,
+            "mean": 574,
+            "p25": 574.0,
+            "p50": 574.0,
+            "p75": 574.0,
+            "p90": 574.0
+          }
+        },
+        "output_tokens_per_second": {
+          "min": 86.97072083583245,
+          "max": 134.59182598031228,
+          "mean": 97.93556938855643,
+          "p25": 96.06618678158976,
+          "p50": 97.0072503832971,
+          "p75": 99.01382751270262,
+          "p90": 100.71066058801395
+        },
+        "error_messages": []
+      }
+    }
+  },
+  "failed_tests": [],
+  "skipped_tests": [],
+  "summary": {
+    "total_tests": 24,
+    "avg_throughput": 0,
+    "avg_first_token_latency": 0,
+    "avg_end_to_end_latency": 0,
+    "best_throughput": {
+      "value": 0,
+      "test_case": ""
+    },
+    "worst_throughput": {
+      "value": Infinity,
+      "test_case": ""
+    },
+    "best_latency": {
+      "value": Infinity,
+      "test_case": ""
+    },
+    "worst_latency": {
+      "value": 0,
+      "test_case": ""
+    }
+  }
+}

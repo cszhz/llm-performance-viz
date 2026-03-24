@@ -6,7 +6,8 @@ export async function loadTokenParameters() {
     if (!STATE.currentSelection) return;
 
     try {
-        const response = await fetch(getApiUrl(`/api/parameters?runtime=${encodeURIComponent(STATE.currentSelection.runtime)}&instance_type=${encodeURIComponent(STATE.currentSelection.instance_type)}&model_name=${encodeURIComponent(STATE.currentSelection.model_name)}`));
+        const project = STATE.currentProject || 'default';
+        const response = await fetch(getApiUrl(`/api/parameters?project=${encodeURIComponent(project)}&runtime=${encodeURIComponent(STATE.currentSelection.runtime)}&instance_type=${encodeURIComponent(STATE.currentSelection.instance_type)}&model_name=${encodeURIComponent(STATE.currentSelection.model_name)}`));
         const params = await response.json();
 
         preserveTokenSelections(params);

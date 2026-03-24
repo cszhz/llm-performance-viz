@@ -37,7 +37,9 @@ export const STATE = {
     selectedCombinations: [],
     charts: {},
     currentSelection: null,
-    chartVisibility: {}
+    chartVisibility: {},
+    currentProject: 'default',
+    availableProjects: ['default']
 };
 
 // Utility functions

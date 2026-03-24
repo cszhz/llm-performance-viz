@@ -18,7 +18,8 @@ export async function generateCharts() {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                combinations: STATE.selectedCombinations
+                combinations: STATE.selectedCombinations,
+                project: STATE.currentProject || 'default'
             })
         });
 

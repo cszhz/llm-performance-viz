@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "processes": 16,
+    "requests_per_process": 5,
+    "total_requests": 80,
+    "model_id": "/fsx/models/gpt-oss-20b",
+    "input_tokens": 256,
+    "random_tokens": 100,
+    "output_tokens": 128,
+    "url": "http://10.0.155.84:31000/v1/chat/completions",
+    "output_file": "archive_results/sglang-v0.5.9--g6e.8xlarge--gpt-oss-20b-tp1/test_in:256_out:128_proc:16_rand:100.json",
+    "total_test_duration": 12.922240734100342,
+    "requests_per_second": 6.190876771772947
+  },
+  "statistics": {
+    "total_requests": 80,
+    "successful_requests": 80,
+    "failed_requests": 0,
+    "success_rate": 1.0,
+    "first_token_latency": {
+      "min": 0.055074214935302734,
+      "max": 0.22524547576904297,
+      "mean": 0.18126811683177949,
+      "p25": 0.13099420070648193,
+      "p50": 0.20574510097503662,
+      "p75": 0.21769601106643677,
+      "p90": 0.22387940883636476
+    },
+    "end_to_end_latency": {
+      "min": 2.549971580505371,
+      "max": 2.6078977584838867,
+      "mean": 2.579960709810257,
+      "p25": 2.5522541999816895,
+      "p50": 2.589800238609314,
+      "p75": 2.601584732532501,
+      "p90": 2.6065292596817016
+    },
+    "token_usage": {
+      "prompt_tokens": {
+        "min": 318,
+        "max": 318,
+        "mean": 318,
+        "p25": 318.0,
+        "p50": 318.0,
+        "p75": 318.0,
+        "p90": 318.0
+      },
+      "completion_tokens": {
+        "min": 128,
+        "max": 128,
+        "mean": 128,
+        "p25": 128.0,
+        "p50": 128.0,
+        "p75": 128.0,
+        "p90": 128.0
+      },
+      "total_tokens": {
+        "min": 446,
+        "max": 446,
+        "mean": 446,
+        "p25": 446.0,
+        "p50": 446.0,
+        "p75": 446.0,
+        "p90": 446.0
+      }
+    },
+    "output_tokens_per_second": {
+      "min": 50.48309570953185,
+      "max": 54.999590426008176,
+      "mean": 53.39009126833364,
+      "p25": 52.84736637141582,
+      "p50": 53.60524944073948,
+      "p75": 53.65424541304068,
+      "p90": 54.9639315160191
+    },
+    "error_messages": []
+  }
+}

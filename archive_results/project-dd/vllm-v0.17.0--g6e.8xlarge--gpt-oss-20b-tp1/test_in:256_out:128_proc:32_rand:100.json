@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "processes": 32,
+    "requests_per_process": 5,
+    "total_requests": 160,
+    "model_id": "/fsx/models/gpt-oss-20b",
+    "input_tokens": 256,
+    "random_tokens": 100,
+    "output_tokens": 128,
+    "url": "http://10.0.152.18:8000/v1/chat/completions",
+    "output_file": "test_results/20260318_114330/test_in:256_out:128_proc:32_rand:100.json",
+    "total_test_duration": 11.42890739440918,
+    "requests_per_second": 13.999588453946979
+  },
+  "statistics": {
+    "total_requests": 160,
+    "successful_requests": 160,
+    "failed_requests": 0,
+    "success_rate": 1.0,
+    "first_token_latency": {
+      "min": 0.10504031181335449,
+      "max": 0.20233750343322754,
+      "mean": 0.1676354229450226,
+      "p25": 0.16096240282058716,
+      "p50": 0.1733090877532959,
+      "p75": 0.18976080417633057,
+      "p90": 0.19564204216003417
+    },
+    "end_to_end_latency": {
+      "min": 1.0466585159301758,
+      "max": 2.2984349727630615,
+      "mean": 2.2438457280397417,
+      "p25": 2.2655670046806335,
+      "p50": 2.27177894115448,
+      "p75": 2.282073736190796,
+      "p90": 2.287843632698059
+    },
+    "token_usage": {
+      "prompt_tokens": {
+        "min": 0,
+        "max": 318,
+        "mean": 300.1125,
+        "p25": 318.0,
+        "p50": 318.0,
+        "p75": 318.0,
+        "p90": 318.0
+      },
+      "completion_tokens": {
+        "min": 0,
+        "max": 128,
+        "mean": 120.8,
+        "p25": 128.0,
+        "p50": 128.0,
+        "p75": 128.0,
+        "p90": 128.0
+      },
+      "total_tokens": {
+        "min": 0,
+        "max": 446,
+        "mean": 420.9125,
+        "p25": 446.0,
+        "p50": 446.0,
+        "p75": 446.0,
+        "p90": 446.0
+      }
+    },
+    "output_tokens_per_second": {
+      "min": 58.54273704141537,
+      "max": 62.39991668712295,
+      "mean": 60.77087055470491,
+      "p25": 60.564140246910526,
+      "p50": 60.7894854421732,
+      "p75": 61.39659402180081,
+      "p90": 61.93259213996024
+    },
+    "error_messages": []
+  }
+}

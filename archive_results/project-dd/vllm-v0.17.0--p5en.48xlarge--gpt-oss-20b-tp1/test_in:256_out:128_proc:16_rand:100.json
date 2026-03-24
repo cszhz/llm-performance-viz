@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "processes": 16,
+    "requests_per_process": 5,
+    "total_requests": 80,
+    "model_id": "/fsx/models/gpt-oss-20b",
+    "input_tokens": 256,
+    "random_tokens": 100,
+    "output_tokens": 128,
+    "url": "http://10.0.128.138:8000/v1/chat/completions",
+    "output_file": "archive_results/vllm-v0.17.0--p5en.48xlarge--gpt-oss-20b-tp1/test_in:256_out:128_proc:16_rand:100.json",
+    "total_test_duration": 4.041894197463989,
+    "requests_per_second": 19.792700177603486
+  },
+  "statistics": {
+    "total_requests": 80,
+    "successful_requests": 80,
+    "failed_requests": 0,
+    "success_rate": 1.0,
+    "first_token_latency": {
+      "min": 0.037905216217041016,
+      "max": 0.07460188865661621,
+      "mean": 0.0618546336889267,
+      "p25": 0.05897939205169678,
+      "p50": 0.06353485584259033,
+      "p75": 0.06617838144302368,
+      "p90": 0.07007956504821777
+    },
+    "end_to_end_latency": {
+      "min": 0.4978609085083008,
+      "max": 0.8098373413085938,
+      "mean": 0.7901546210050583,
+      "p25": 0.7941251397132874,
+      "p50": 0.8023086786270142,
+      "p75": 0.8048320412635803,
+      "p90": 0.8087790966033935
+    },
+    "token_usage": {
+      "prompt_tokens": {
+        "min": 0,
+        "max": 318,
+        "mean": 302.1,
+        "p25": 318.0,
+        "p50": 318.0,
+        "p75": 318.0,
+        "p90": 318.0
+      },
+      "completion_tokens": {
+        "min": 0,
+        "max": 128,
+        "mean": 121.6,
+        "p25": 128.0,
+        "p50": 128.0,
+        "p75": 128.0,
+        "p90": 128.0
+      },
+      "total_tokens": {
+        "min": 0,
+        "max": 446,
+        "mean": 423.7,
+        "p25": 446.0,
+        "p50": 446.0,
+        "p75": 446.0,
+        "p90": 446.0
+      }
+    },
+    "output_tokens_per_second": {
+      "min": 168.58177396948847,
+      "max": 176.83559196031342,
+      "mean": 173.2646606609548,
+      "p25": 171.65535517609362,
+      "p50": 173.82375269681927,
+      "p75": 174.6282563670031,
+      "p90": 175.6020926874242
+    },
+    "error_messages": []
+  }
+}

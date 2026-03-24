@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "processes": 64,
+    "requests_per_process": 5,
+    "total_requests": 320,
+    "model_id": "/fsx/models/gpt-oss-20b",
+    "input_tokens": 256,
+    "random_tokens": 100,
+    "output_tokens": 128,
+    "url": "http://10.0.152.18:8000/v1/chat/completions",
+    "output_file": "test_results/20260318_114330/test_in:256_out:128_proc:64_rand:100.json",
+    "total_test_duration": 22.909969806671143,
+    "requests_per_second": 13.967718102658493
+  },
+  "statistics": {
+    "total_requests": 320,
+    "successful_requests": 320,
+    "failed_requests": 0,
+    "success_rate": 1.0,
+    "first_token_latency": {
+      "min": 0.17673397064208984,
+      "max": 2.4573168754577637,
+      "mean": 2.166703921556473,
+      "p25": 2.380980372428894,
+      "p50": 2.4191055297851562,
+      "p75": 2.427279531955719,
+      "p90": 2.4438063144683837
+    },
+    "end_to_end_latency": {
+      "min": 1.2078132629394531,
+      "max": 4.625176429748535,
+      "mean": 4.277322310209274,
+      "p25": 4.499638557434082,
+      "p50": 4.5562745332717896,
+      "p75": 4.580585241317749,
+      "p90": 4.587038731575012
+    },
+    "token_usage": {
+      "prompt_tokens": {
+        "min": 0,
+        "max": 318,
+        "mean": 299.11875,
+        "p25": 318.0,
+        "p50": 318.0,
+        "p75": 318.0,
+        "p90": 318.0
+      },
+      "completion_tokens": {
+        "min": 0,
+        "max": 128,
+        "mean": 120.4,
+        "p25": 128.0,
+        "p50": 128.0,
+        "p75": 128.0,
+        "p90": 128.0
+      },
+      "total_tokens": {
+        "min": 0,
+        "max": 446,
+        "mean": 419.51875,
+        "p25": 446.0,
+        "p50": 446.0,
+        "p75": 446.0,
+        "p90": 446.0
+      }
+    },
+    "output_tokens_per_second": {
+      "min": 57.57015188877646,
+      "max": 62.335072710388495,
+      "mean": 59.78953144491339,
+      "p25": 59.36309993676365,
+      "p50": 59.82757180839831,
+      "p75": 60.43750750725396,
+      "p90": 61.21793831807458
+    },
+    "error_messages": []
+  }
+}

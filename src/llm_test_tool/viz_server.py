@@ -230,12 +230,115 @@ class PriceProvider:
 
 class ResultsDataProvider:
     """Data provider for LLM performance test results"""
-    
+
     def __init__(self, results_dir: str = "archive_results"):
         self.results_dir = Path(results_dir)
         self.data = []
         self.df = None
-        self.load_all_results()
+        self.current_project = "default"
+        self._ensure_default_project()
+
+    def _ensure_default_project(self):
+        """Ensure default project exists and migrate old data if needed"""
+        default_project_dir = self.results_dir / "default"
+
+        # Check if we need to migrate old structure
+        if self.results_dir.exists():
+            # Find old-style directories (containing test_*.json files at top level)
+            old_dirs = []
+            for item in self.results_dir.iterdir():
+                if item.is_dir() and not item.name.startswith('.'):
+                    # Check if this looks like an old test result directory
+                    test_files = list(item.glob("test_*.json"))
+                    if test_files and item.name != "default":
+                        old_dirs.append(item)
+
+            # If we found old-style directories and default doesn't exist, create it
+            if old_dirs and not default_project_dir.exists():
+                print(f"Detected old directory structure. Creating default project...")
+                default_project_dir.mkdir(parents=True, exist_ok=True)
+
+        # Ensure default project directory exists
+        default_project_dir.mkdir(parents=True, exist_ok=True)
+
+    def get_available_projects(self) -> List[str]:
+        """Get list of all available projects"""
+        if not self.results_dir.exists():
+            return ["default"]
+
+        projects = []
+        for item in self.results_dir.iterdir():
+            if item.is_dir() and not item.name.startswith('.'):
+                projects.append(item.name)
+
+        return sorted(projects) if projects else ["default"]
+
+    def load_all_results(self, project_name: str = "default"):
+        """Load all test results from the specified project"""
+        self.current_project = project_name
+        project_dir = self.results_dir / project_name
+
+        print(f"Loading results from {project_dir}...")
+        self.data = []
+
+        if not project_dir.exists():
+            print(f"Project directory '{project_dir}' does not exist")
+            self.df = pd.DataFrame(self.data)
+            return
+
+        for result_dir in project_dir.iterdir():
+            if not result_dir.is_dir():
+                continue
+
+            dir_info = self.parse_directory_name(result_dir.name)
+            if not dir_info:
+                continue
+
+            for result_file in result_dir.glob("test_*.json"):
+                file_info = self.parse_filename(result_file.name)
+                if not file_info:
+                    continue
+
+                try:
+                    with open(result_file, 'r') as f:
+                        result_data = json.load(f)
+
+                    stats = result_data.get('statistics', {})
+                    metadata = result_data.get('metadata', {})
+
+                    record = {
+                        **dir_info,
+                        **file_info,
+                        'first_token_latency_mean': stats.get('first_token_latency', {}).get('mean', 0),
+                        'first_token_latency_p50': stats.get('first_token_latency', {}).get('p50', 0),
+                        'first_token_latency_p90': stats.get('first_token_latency', {}).get('p90', 0),
+                        'first_token_latency_min': stats.get('first_token_latency', {}).get('min', 0),
+                        'first_token_latency_max': stats.get('first_token_latency', {}).get('max', 0),
+                        'end_to_end_latency_mean': stats.get('end_to_end_latency', {}).get('mean', 0),
+                        'end_to_end_latency_p50': stats.get('end_to_end_latency', {}).get('p50', 0),
+                        'end_to_end_latency_p90': stats.get('end_to_end_latency', {}).get('p90', 0),
+                        'output_tokens_per_second_mean': stats.get('output_tokens_per_second', {}).get('mean', 0),
+                        'output_tokens_per_second_p50': stats.get('output_tokens_per_second', {}).get('p50', 0),
+                        'output_tokens_per_second_p90': stats.get('output_tokens_per_second', {}).get('p90', 0),
+                        'output_tokens_per_second_min': stats.get('output_tokens_per_second', {}).get('min', 0),
+                        'output_tokens_per_second_max': stats.get('output_tokens_per_second', {}).get('max', 0),
+                        'success_rate': stats.get('success_rate', 0),
+                        'requests_per_second': metadata.get('requests_per_second', 0),
+                        'total_requests': metadata.get('total_requests', 0),
+                        'successful_requests': stats.get('successful_requests', 0),
+                        'failed_requests': stats.get('failed_requests', 0),
+                        'total_tokens_mean': stats.get('token_usage', {}).get('total_tokens', {}).get('mean', 0),
+                        'server_throughput': metadata.get('requests_per_second', 0) * stats.get('token_usage', {}).get('total_tokens', {}).get('mean', 0),
+                        'file_path': str(result_file)
+                    }
+
+                    self.data.append(record)
+
+                except Exception as e:
+                    print(f"Error loading {result_file}: {e}")
+
+        self.df = pd.DataFrame(self.data)
+        print(f"Loaded {len(self.data)} test results from project '{project_name}'")
     
     def parse_filename(self, filename: str) -> Optional[Dict[str, str]]:
         """Parse test result filename to extract parameters"""
@@ -283,64 +386,6 @@ class ResultsDataProvider:
                 'model_name': model_name
             }
         return None
-    
-    def load_all_results(self):
-        """Load all test results from the archive directory"""
-        print(f"Loading results from {self.results_dir}...")
-        self.data = []
-        for result_dir in self.results_dir.iterdir():
-            if not result_dir.is_dir():
-                continue
-            
-            dir_info = self.parse_directory_name(result_dir.name)
-            if not dir_info:
-                continue
-            
-            for result_file in result_dir.glob("test_*.json"):
-                file_info = self.parse_filename(result_file.name)
-                if not file_info:
-                    continue
-                
-                try:
-                    with open(result_file, 'r') as f:
-                        result_data = json.load(f)
-                    
-                    stats = result_data.get('statistics', {})
-                    metadata = result_data.get('metadata', {})
-                    
-                    record = {
-                        **dir_info,
-                        **file_info,
-                        'first_token_latency_mean': stats.get('first_token_latency', {}).get('mean', 0),
-                        'first_token_latency_p50': stats.get('first_token_latency', {}).get('p50', 0),
-                        'first_token_latency_p90': stats.get('first_token_latency', {}).get('p90', 0),
-                        'first_token_latency_min': stats.get('first_token_latency', {}).get('min', 0),
-                        'first_token_latency_max': stats.get('first_token_latency', {}).get('max', 0),
-                        'end_to_end_latency_mean': stats.get('end_to_end_latency', {}).get('mean', 0),
-                        'end_to_end_latency_p50': stats.get('end_to_end_latency', {}).get('p50', 0),
-                        'end_to_end_latency_p90': stats.get('end_to_end_latency', {}).get('p90', 0),
-                        'output_tokens_per_second_mean': stats.get('output_tokens_per_second', {}).get('mean', 0),
-                        'output_tokens_per_second_p50': stats.get('output_tokens_per_second', {}).get('p50', 0),
-                        'output_tokens_per_second_p90': stats.get('output_tokens_per_second', {}).get('p90', 0),
-                        'output_tokens_per_second_min': stats.get('output_tokens_per_second', {}).get('min', 0),
-                        'output_tokens_per_second_max': stats.get('output_tokens_per_second', {}).get('max', 0),
-                        'success_rate': stats.get('success_rate', 0),
-                        'requests_per_second': metadata.get('requests_per_second', 0),
-                        'total_requests': metadata.get('total_requests', 0),
-                        'successful_requests': stats.get('successful_requests', 0),
-                        'failed_requests': stats.get('failed_requests', 0),
-                        'total_tokens_mean': stats.get('token_usage', {}).get('total_tokens', {}).get('mean', 0),
-                        'server_throughput': metadata.get('requests_per_second', 0) * stats.get('token_usage', {}).get('total_tokens', {}).get('mean', 0),
-                        'file_path': str(result_file)
-                    }
-                    
-                    self.data.append(record)
-                    
-                except Exception as e:
-                    print(f"Error loading {result_file}: {e}")
-        
-        self.df = pd.DataFrame(self.data)
-        print(f"Loaded {len(self.data)} test results")
     
     def get_combinations(self) -> List[Dict[str, str]]:
         """Get all available runtime-instance-model combinations"""
@@ -419,6 +464,7 @@ class ResultsDataProvider:
 # Pydantic models for request/response
 class ComparisonRequest(BaseModel):
     combinations: List[Dict]
+    project: Optional[str] = "default"
 
 class CombinationInfo(BaseModel):
     runtime: str
@@ -434,6 +480,8 @@ class AnalyticsEvent(BaseModel):
 # Get results directory from environment variable if set
 results_dir = os.environ.get('RESULTS_DIR', 'archive_results')
 data_provider = ResultsDataProvider(results_dir)
+# Load default project data
+data_provider.load_all_results(project_name="default")
 price_provider = PriceProvider()
 
 
@@ -530,6 +578,13 @@ async def liveness_check():
     """Simple liveness check for Kubernetes/Docker"""
     return {"status": "alive", "timestamp": datetime.now().isoformat()}
 
+@app.get("/api/projects")
+async def get_projects(request: Request):
+    """Get list of all available projects"""
+    analytics.log_event(request, 'list_projects')
+    projects = data_provider.get_available_projects()
+    return {"projects": projects}
+
 @app.get("/")
 async def index(request: Request):
     """Serve the main HTML page with root path injection"""
@@ -606,9 +661,15 @@ async def get_analytics_stats(request: Request):
     return analytics.get_stats()
 
 @app.get("/api/combinations", response_model=List[CombinationInfo])
-async def get_combinations(request: Request):
+async def get_combinations(
+    request: Request,
+    project: str = Query("default", description="Project name")
+):
     """Get all available runtime-instance-model combinations"""
-    analytics.log_event(request, 'api_combinations_access')
+    analytics.log_event(request, 'api_combinations_access', {'project': project})
+    # Load data for the specified project if needed
+    if data_provider.current_project != project:
+        data_provider.load_all_results(project_name=project)
     combinations = data_provider.get_combinations()
     return combinations
 
@@ -616,16 +677,21 @@ async def get_combinations(request: Request):
 @app.get("/api/parameters")
 async def get_parameters(
     request: Request,
+    project: str = Query("default", description="Project name"),
     runtime: str = Query(..., description="Runtime name"),
     instance_type: str = Query(..., description="Instance type"),
     model_name: str = Query(..., description="Model name")
 ):
     """Get available test parameters for a specific combination"""
     analytics.log_event(request, 'model_selected', {
+        'project': project,
         'runtime': runtime,
         'instance_type': instance_type,
         'model_name': model_name
     })
+    # Load data for the specified project if needed
+    if data_provider.current_project != project:
+        data_provider.load_all_results(project_name=project)
     parameters = data_provider.get_test_parameters(runtime, instance_type, model_name)
     return parameters
 
@@ -641,6 +707,7 @@ async def get_instance_prices():
 
 @app.get("/api/performance-data")
 async def get_performance_data(
+    project: str = Query("default", description="Project name"),
     runtime: Optional[str] = Query(None),
     instance_type: Optional[str] = Query(None),
     model_name: Optional[str] = Query(None),
@@ -651,6 +718,10 @@ async def get_performance_data(
     image_size: Optional[str] = Query(None)
 ):
     """Get performance data based on filters"""
+    # Load data for the specified project if needed
+    if data_provider.current_project != project:
+        data_provider.load_all_results(project_name=project)
+
     filters = {}
     
     # Build filters from query parameters
@@ -683,15 +754,20 @@ class ComparisonRequestWithPrice(BaseModel):
 async def get_comparison_data(http_request: Request, request: ComparisonRequest):
     """Get performance data for multiple combinations for comparison"""
     try:
+        # Load data for the specified project if needed
+        if data_provider.current_project != request.project:
+            data_provider.load_all_results(project_name=request.project)
+
         # Log comparison request
         analytics.log_event(http_request, 'comparison_generated', {
+            'project': request.project,
             'combinations_count': len(request.combinations),
             'combinations': [
                 f"{combo.get('runtime', 'unknown')}-{combo.get('instance_type', 'unknown')}-{combo.get('model_name', 'unknown')}"
                 for combo in request.combinations
             ]
         })
-        
+
         result = []
         for combo in request.combinations:
             data = data_provider.get_performance_data(combo)
@@ -783,15 +859,21 @@ async def get_comparison_data(http_request: Request, request: ComparisonRequest)
 
 
 @app.get("/api/tree-structure")
-async def get_tree_structure(request: Request, reload: bool = Query(False, description="Whether to reload data from disk")):
+async def get_tree_structure(
+    request: Request,
+    project: str = Query("default", description="Project name"),
+    reload: bool = Query(False, description="Whether to reload data from disk")
+):
     """Get hierarchical tree structure of Runtime -> Instance Type -> Model"""
     # Log tree structure access
-    analytics.log_event(request, 'tree_structure_access', {'reload': reload})
-    
-    # Only reload all results from disk if explicitly requested (e.g., by refresh button)
-    if reload:
-        data_provider.load_all_results()
-    
+    analytics.log_event(request, 'tree_structure_access', {'project': project, 'reload': reload})
+
+    # Load project data if:
+    # 1. reload=True (refresh button), OR
+    # 2. Project changed (user switched project)
+    if reload or data_provider.current_project != project:
+        data_provider.load_all_results(project_name=project)
+
     if data_provider.df is None or data_provider.df.empty:
         return {"tree": []}
     
@@ -885,15 +967,20 @@ async def get_stats():
 async def export_csv(http_request: Request, request: ComparisonRequest):
     """Export performance data as CSV file - ALB compatible"""
     try:
+        # Load data for the specified project if needed
+        if data_provider.current_project != request.project:
+            data_provider.load_all_results(project_name=request.project)
+
         # Log export request
         analytics.log_event(http_request, 'server_export_requested', {
+            'project': request.project,
             'combinations_count': len(request.combinations),
             'combinations': [
                 f"{combo.get('runtime', 'unknown')}-{combo.get('instance_type', 'unknown')}-{combo.get('model_name', 'unknown')}"
                 for combo in request.combinations
             ]
         })
-        
+
         # Get the data using the same logic as comparison-data
         result = []
         for combo in request.combinations:

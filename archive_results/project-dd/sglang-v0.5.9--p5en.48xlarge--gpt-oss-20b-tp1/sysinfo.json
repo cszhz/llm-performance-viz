@@ -1,0 +1,20 @@
+{
+  "benchmark_tool": "llm-performance-viz",
+  "os": {
+    "name": "Ubuntu",
+    "version": "24.04.4 LTS (Noble Numbat)",
+    "kernel": "6.17.0-1009-aws"
+  },
+  "cuda_version": "",
+  "nvidia_driver_version": "",
+  "gpu": {
+    "name": "",
+    "memory": ""
+  },
+  "cpu": {
+    "model": "Intel(R) Xeon(R) 6975P-C",
+    "cores": "8"
+  },
+  "total_memory": "15 GB",
+  "timestamp": "2026-03-24T07:44:15Z"
+}

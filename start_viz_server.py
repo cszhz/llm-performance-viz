@@ -37,6 +37,8 @@ Examples:
                        help="Root path for deployment under a subdomain (e.g., /viz)")
     parser.add_argument("--results-dir", "-r", type=str, default="archive_results",
                        help="Directory containing test results (default: archive_results)")
+    parser.add_argument("--project", type=str, default="default",
+                       help="Default project to load (default: default)")
     parser.add_argument("--analytics-file", "-a", type=str, default="user_analytics.json",
                        help="Path to analytics data file (default: user_analytics.json)")
     parser.add_argument("--analytics-log", type=str, default="viz_access.log",
@@ -63,14 +65,16 @@ Examples:
         os.environ['ROOT_PATH'] = args.root_path.rstrip('/')
     
     os.environ['RESULTS_DIR'] = args.results_dir
+    os.environ['DEFAULT_PROJECT'] = args.project
     os.environ['ANALYTICS_FILE'] = str(analytics_file_path)
     os.environ['ANALYTICS_LOG'] = str(analytics_log_path)
-    
+
     # Import app after setting environment variables
     from llm_test_tool.viz_server import app
-    
+
     print(f"Starting LLM Performance Visualization Server...")
     print(f"Results directory: {args.results_dir}")
+    print(f"Default project: {args.project}")
     print(f"Analytics data file: {args.analytics_file}")
     print(f"Analytics log file: {args.analytics_log}")
     if args.root_path:

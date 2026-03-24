@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "processes": 16,
+    "requests_per_process": 5,
+    "total_requests": 80,
+    "model_id": "/fsx/models/gpt-oss-20b",
+    "input_tokens": 128,
+    "random_tokens": 100,
+    "output_tokens": 256,
+    "url": "http://10.0.152.18:8000/v1/chat/completions",
+    "output_file": "test_results/20260318_114330/test_in:128_out:256_proc:16_rand:100.json",
+    "total_test_duration": 19.900709867477417,
+    "requests_per_second": 4.019957103677964
+  },
+  "statistics": {
+    "total_requests": 80,
+    "successful_requests": 80,
+    "failed_requests": 0,
+    "success_rate": 1.0,
+    "first_token_latency": {
+      "min": 0.09165453910827637,
+      "max": 0.1375582218170166,
+      "mean": 0.11569266319274903,
+      "p25": 0.11434614658355713,
+      "p50": 0.11789906024932861,
+      "p75": 0.12279254198074341,
+      "p90": 0.12996582984924318
+    },
+    "end_to_end_latency": {
+      "min": 1.2577285766601562,
+      "max": 4.038811922073364,
+      "mean": 3.7981255888938903,
+      "p25": 3.9696672558784485,
+      "p50": 4.015252470970154,
+      "p75": 4.026245892047882,
+      "p90": 4.027038860321045
+    },
+    "token_usage": {
+      "prompt_tokens": {
+        "min": 0,
+        "max": 190,
+        "mean": 163.875,
+        "p25": 190.0,
+        "p50": 190.0,
+        "p75": 190.0,
+        "p90": 190.0
+      },
+      "completion_tokens": {
+        "min": 0,
+        "max": 256,
+        "mean": 220.8,
+        "p25": 256.0,
+        "p50": 256.0,
+        "p75": 256.0,
+        "p90": 256.0
+      },
+      "total_tokens": {
+        "min": 0,
+        "max": 446,
+        "mean": 384.675,
+        "p25": 446.0,
+        "p50": 446.0,
+        "p75": 446.0,
+        "p90": 446.0
+      }
+    },
+    "output_tokens_per_second": {
+      "min": 64.88243147426455,
+      "max": 69.32579011341818,
+      "mean": 66.0945544145972,
+      "p25": 65.51160508406873,
+      "p50": 65.66806158209647,
+      "p75": 66.34770652383197,
+      "p90": 69.24266679499513
+    },
+    "error_messages": []
+  }
+}

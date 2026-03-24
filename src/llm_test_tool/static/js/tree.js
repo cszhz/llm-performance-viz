@@ -6,21 +6,62 @@ import { loadTokenParameters } from './tokens.js';
 import { updateComparisonList, generateCharts, clearCharts, updateUrlWithState } from './charts.js';
 
 export async function loadTreeStructure(reload = false) {
-    const url = reload ? getApiUrl('/api/tree-structure?reload=true') : getApiUrl('/api/tree-structure');
-    const response = await fetch(url);
-    const data = await response.json();
-    STATE.treeData = data.tree;
-    renderTree();
+    console.log('[loadTreeStructure] Function entry, reload:', reload);
+    try {
+        const project = STATE.currentProject || 'default';
+        const reloadParam = reload ? '&reload=true' : '';
+        const url = getApiUrl(`/api/tree-structure?project=${encodeURIComponent(project)}${reloadParam}`);
+        console.log('[loadTreeStructure] Loading tree structure from:', url);
+        console.log('[loadTreeStructure] Project:', project, 'Reload:', reload);
+
+        console.log('[loadTreeStructure] Starting fetch...');
+        const response = await fetch(url);
+        console.log('[loadTreeStructure] Fetch response received, status:', response.status);
+        if (!response.ok) {
+            throw new Error(`API returned ${response.status}: ${response.statusText}`);
+        }
+
+        console.log('[loadTreeStructure] Parsing JSON...');
+        const data = await response.json();
+        console.log('[loadTreeStructure] Tree structure received:', data);
+
+        STATE.treeData = data.tree || [];
+        console.log('Tree data updated, nodes:', STATE.treeData.length);
+
+        renderTree();
+        console.log('Tree rendered successfully');
+    } catch (error) {
+        console.error('Failed to load tree structure:', error);
+        throw error;
+    }
 }
 
 export function renderTree() {
-    const treeContainer = document.getElementById('runtime-tree');
-    treeContainer.innerHTML = '';
+    try {
+        console.log('Rendering tree with', STATE.treeData.length, 'nodes');
+        const treeContainer = document.getElementById('runtime-tree');
+        if (!treeContainer) {
+            console.error('Tree container not found');
+            return;
+        }
 
-    STATE.treeData.forEach(runtimeNode => {
-        const runtimeElement = createTreeNode(runtimeNode, 0);
-        treeContainer.appendChild(runtimeElement);
-    });
+        treeContainer.innerHTML = '';
+
+        if (!STATE.treeData || STATE.treeData.length === 0) {
+            console.warn('No tree data to render');
+            treeContainer.innerHTML = '<li>No data available</li>';
+            return;
+        }
+
+        STATE.treeData.forEach(runtimeNode => {
+            const runtimeElement = createTreeNode(runtimeNode, 0);
+            treeContainer.appendChild(runtimeElement);
+        });
+
+        console.log('Tree rendering complete');
+    } catch (error) {
+        console.error('Error rendering tree:', error);
+    }
 }
 
 export function createTreeNode(node, level) {

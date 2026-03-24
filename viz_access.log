@@ -1,0 +1,178 @@
+2026-03-24 11:22:27,681 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_4296 - list_projects - None
+2026-03-24 11:22:27,705 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_4296 - tree_structure_access - {'project': 'default', 'reload': False}
+2026-03-24 11:22:27,729 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_4296 - api_combinations_access - {'project': 'project-a'}
+2026-03-24 11:23:16,674 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_7724 - page_visit - {'page': 'index'}
+2026-03-24 11:23:17,046 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_7724 - tree_structure_access - {'project': 'default', 'reload': False}
+2026-03-24 11:23:17,249 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_7724 - tree_structure_access - {'project': 'default', 'reload': False}
+2026-03-24 11:24:06,854 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_7243 - list_projects - None
+2026-03-24 11:24:22,559 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_7724 - tree_structure_access - {'project': 'default', 'reload': True}
+2026-03-24 11:24:22,763 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_7724 - tree_structure_access - {'project': 'default', 'reload': True}
+2026-03-24 11:24:24,457 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_7724 - comparison_generated - {'project': 'default', 'combinations_count': 1, 'combinations': ['test-model-instance-x1-model-1']}
+2026-03-24 11:24:24,465 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_7724 - chart_added_successfully - {'runtime': 'test-model', 'instance_type': 'instance-x1', 'model_name': 'model-1', 'input_tokens': 1600, 'output_tokens': 400, 'random_tokens': 1600, 'image_count': 0, 'image_size': '', 'timestamp': '2026-03-24T11:24:24.191Z', 'client_id': '127.0.0.1_7724'}
+2026-03-24 11:24:41,436 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_7724 - tree_structure_access - {'project': 'default', 'reload': True}
+2026-03-24 11:24:41,638 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_7724 - tree_structure_access - {'project': 'default', 'reload': True}
+2026-03-24 11:25:45,956 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_424 - page_visit - {'page': 'index'}
+2026-03-24 11:25:46,636 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_424 - list_projects - None
+2026-03-24 11:25:46,835 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_424 - tree_structure_access - {'project': 'default', 'reload': False}
+2026-03-24 11:25:47,037 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_424 - tree_structure_access - {'project': 'default', 'reload': False}
+2026-03-24 11:25:47,568 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_424 - comparison_generated - {'project': 'default', 'combinations_count': 1, 'combinations': ['test-model-instance-x1-model-1']}
+2026-03-24 11:25:47,751 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_424 - comparison_generated - {'project': 'default', 'combinations_count': 1, 'combinations': ['test-model-instance-x1-model-1']}
+2026-03-24 11:25:53,905 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_424 - tree_structure_access - {'project': 'default', 'reload': False}
+2026-03-24 11:25:54,117 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_424 - project_switched - {'project': 'dd', 'timestamp': '2026-03-24T11:25:53.878Z', 'client_id': '127.0.0.1_424'}
+2026-03-24 11:26:19,421 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_424 - tree_structure_access - {'project': 'default', 'reload': False}
+2026-03-24 11:26:19,683 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_424 - project_switched - {'project': 'default', 'timestamp': '2026-03-24T11:26:19.392Z', 'client_id': '127.0.0.1_424'}
+2026-03-24 11:26:24,456 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_424 - tree_structure_access - {'project': 'default', 'reload': False}
+2026-03-24 11:26:24,662 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_424 - project_switched - {'project': 'dd', 'timestamp': '2026-03-24T11:26:24.424Z', 'client_id': '127.0.0.1_424'}
+2026-03-24 11:27:34,029 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_6227 - tree_structure_access - {'project': 'default', 'reload': False}
+2026-03-24 11:27:34,045 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_6227 - tree_structure_access - {'project': 'project-a', 'reload': False}
+2026-03-24 11:28:06,983 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_6227 - list_projects - None
+2026-03-24 11:28:07,007 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_6227 - tree_structure_access - {'project': 'dd', 'reload': False}
+2026-03-24 11:28:07,024 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_6227 - tree_structure_access - {'project': 'default', 'reload': False}
+2026-03-24 11:28:56,224 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_5519 - page_visit - {'page': 'index'}
+2026-03-24 11:28:56,927 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_5519 - tree_structure_access - {'project': 'default', 'reload': False}
+2026-03-24 11:28:57,125 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_5519 - list_projects - None
+2026-03-24 11:28:57,334 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_5519 - tree_structure_access - {'project': 'default', 'reload': False}
+2026-03-24 11:28:57,651 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_5519 - comparison_generated - {'project': 'default', 'combinations_count': 1, 'combinations': ['test-model-instance-x1-model-1']}
+2026-03-24 11:28:58,046 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_5519 - comparison_generated - {'project': 'default', 'combinations_count': 1, 'combinations': ['test-model-instance-x1-model-1']}
+2026-03-24 11:29:03,927 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_5519 - tree_structure_access - {'project': 'default', 'reload': False}
+2026-03-24 11:29:04,138 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_5519 - project_switched - {'project': 'default', 'timestamp': '2026-03-24T11:29:03.898Z', 'client_id': '127.0.0.1_5519'}
+2026-03-24 11:29:11,613 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_5519 - page_visit - {'page': 'index'}
+2026-03-24 11:29:12,110 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_5519 - tree_structure_access - {'project': 'default', 'reload': False}
+2026-03-24 11:29:12,311 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_5519 - list_projects - None
+2026-03-24 11:29:12,519 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_5519 - tree_structure_access - {'project': 'default', 'reload': False}
+2026-03-24 11:29:15,597 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_5519 - comparison_generated - {'project': 'default', 'combinations_count': 1, 'combinations': ['test-model-instance-x1-model-1']}
+2026-03-24 11:29:15,601 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_5519 - chart_added_successfully - {'runtime': 'test-model', 'instance_type': 'instance-x1', 'model_name': 'model-1', 'input_tokens': 1600, 'output_tokens': 400, 'random_tokens': 1600, 'image_count': 0, 'image_size': '', 'timestamp': '2026-03-24T11:29:15.341Z', 'client_id': '127.0.0.1_5519'}
+2026-03-24 11:29:19,345 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_5519 - tree_structure_access - {'project': 'default', 'reload': False}
+2026-03-24 11:29:19,557 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_5519 - project_switched - {'project': 'dd', 'timestamp': '2026-03-24T11:29:19.320Z', 'client_id': '127.0.0.1_5519'}
+2026-03-24 11:29:28,906 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_5519 - tree_structure_access - {'project': 'default', 'reload': True}
+2026-03-24 11:29:29,109 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_5519 - tree_structure_access - {'project': 'default', 'reload': True}
+2026-03-24 11:29:30,245 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_5519 - tree_structure_access - {'project': 'default', 'reload': True}
+2026-03-24 11:29:30,454 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_5519 - tree_structure_access - {'project': 'default', 'reload': True}
+2026-03-24 11:29:31,241 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_5519 - tree_structure_access - {'project': 'default', 'reload': True}
+2026-03-24 11:29:31,447 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_5519 - tree_structure_access - {'project': 'default', 'reload': True}
+2026-03-24 11:29:59,331 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_5519 - tree_structure_access - {'project': 'default', 'reload': False}
+2026-03-24 11:29:59,549 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_5519 - project_switched - {'project': 'default', 'timestamp': '2026-03-24T11:29:59.304Z', 'client_id': '127.0.0.1_5519'}
+2026-03-24 11:30:06,980 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_5519 - page_visit - {'page': 'index'}
+2026-03-24 11:31:37,419 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_5519 - page_visit - {'page': 'index'}
+2026-03-24 11:31:38,109 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_5519 - tree_structure_access - {'project': 'default', 'reload': False}
+2026-03-24 11:31:38,310 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_5519 - list_projects - None
+2026-03-24 11:31:38,517 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_5519 - tree_structure_access - {'project': 'default', 'reload': False}
+2026-03-24 11:31:38,826 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_5519 - comparison_generated - {'project': 'default', 'combinations_count': 1, 'combinations': ['test-model-instance-x1-model-1']}
+2026-03-24 11:31:39,230 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_5519 - comparison_generated - {'project': 'default', 'combinations_count': 1, 'combinations': ['test-model-instance-x1-model-1']}
+2026-03-24 11:32:04,159 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_8050 - page_visit - {'page': 'index'}
+2026-03-24 11:32:04,686 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_8050 - tree_structure_access - {'project': 'default', 'reload': False}
+2026-03-24 11:32:04,885 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_8050 - list_projects - None
+2026-03-24 11:32:05,090 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_8050 - tree_structure_access - {'project': 'default', 'reload': False}
+2026-03-24 11:32:09,425 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_8050 - tree_structure_access - {'project': 'default', 'reload': False}
+2026-03-24 11:32:09,634 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_8050 - project_switched - {'project': 'dd', 'timestamp': '2026-03-24T11:32:09.394Z', 'client_id': '127.0.0.1_8050'}
+2026-03-24 11:33:17,811 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_8499 - page_visit - {'page': 'index'}
+2026-03-24 11:33:18,530 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_8499 - tree_structure_access - {'project': 'default', 'reload': False}
+2026-03-24 11:33:18,731 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_8499 - list_projects - None
+2026-03-24 11:33:18,939 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_8499 - tree_structure_access - {'project': 'default', 'reload': False}
+2026-03-24 11:33:26,244 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_8499 - tree_structure_access - {'project': 'default', 'reload': False}
+2026-03-24 11:33:26,458 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_8499 - project_switched - {'project': 'default', 'timestamp': '2026-03-24T11:33:26.217Z', 'client_id': '127.0.0.1_8499'}
+2026-03-24 11:33:32,991 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_8499 - tree_structure_access - {'project': 'default', 'reload': False}
+2026-03-24 11:33:33,206 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_8499 - project_switched - {'project': 'dd', 'timestamp': '2026-03-24T11:33:32.965Z', 'client_id': '127.0.0.1_8499'}
+2026-03-24 11:34:50,387 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_4351 - list_projects - None
+2026-03-24 11:37:03,203 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_4351 - tree_structure_access - {'project': 'dd', 'reload': False}
+2026-03-24 11:37:09,673 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_4351 - tree_structure_access - {'project': 'default', 'reload': False}
+2026-03-24 11:37:46,986 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_4351 - page_visit - {'page': 'index'}
+2026-03-24 11:39:00,239 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_2088 - page_visit - {'page': 'index'}
+2026-03-24 11:39:00,992 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_2088 - tree_structure_access - {'project': 'default', 'reload': False}
+2026-03-24 11:39:01,191 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_2088 - list_projects - None
+2026-03-24 11:39:02,019 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_2088 - tree_structure_access - {'project': 'default', 'reload': False}
+2026-03-24 11:39:08,856 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_2088 - tree_structure_access - {'project': 'default', 'reload': False}
+2026-03-24 11:39:09,074 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_2088 - project_switched - {'project': 'default', 'timestamp': '2026-03-24T11:39:08.804Z', 'client_id': '127.0.0.1_2088'}
+2026-03-24 11:39:14,030 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_2088 - tree_structure_access - {'project': 'default', 'reload': False}
+2026-03-24 11:39:14,242 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_2088 - project_switched - {'project': 'project-a', 'timestamp': '2026-03-24T11:39:13.971Z', 'client_id': '127.0.0.1_2088'}
+2026-03-24 11:39:19,211 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_2088 - tree_structure_access - {'project': 'default', 'reload': False}
+2026-03-24 11:39:19,425 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_2088 - project_switched - {'project': 'dd', 'timestamp': '2026-03-24T11:39:19.154Z', 'client_id': '127.0.0.1_2088'}
+2026-03-24 11:40:20,468 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_2088 - page_visit - {'page': 'index'}
+2026-03-24 11:40:20,962 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_2088 - tree_structure_access - {'project': 'default', 'reload': False}
+2026-03-24 11:40:21,161 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_2088 - list_projects - None
+2026-03-24 11:40:21,372 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_2088 - tree_structure_access - {'project': 'default', 'reload': False}
+2026-03-24 11:40:22,340 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_2088 - page_visit - {'page': 'index'}
+2026-03-24 11:40:22,638 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_2088 - list_projects - None
+2026-03-24 11:40:22,640 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_2088 - tree_structure_access - {'project': 'default', 'reload': False}
+2026-03-24 11:40:22,860 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_2088 - tree_structure_access - {'project': 'default', 'reload': False}
+2026-03-24 11:40:27,838 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_2088 - tree_structure_access - {'project': 'default', 'reload': False}
+2026-03-24 11:40:28,051 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_2088 - project_switched - {'project': 'default', 'timestamp': '2026-03-24T11:40:27.775Z', 'client_id': '127.0.0.1_2088'}
+2026-03-24 11:40:33,027 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_2088 - tree_structure_access - {'project': 'default', 'reload': False}
+2026-03-24 11:40:33,235 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_2088 - project_switched - {'project': 'dd', 'timestamp': '2026-03-24T11:40:32.963Z', 'client_id': '127.0.0.1_2088'}
+2026-03-24 11:41:30,220 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_2088 - page_visit - {'page': 'index'}
+2026-03-24 11:41:30,955 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_2088 - tree_structure_access - {'project': 'default', 'reload': False}
+2026-03-24 11:41:31,153 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_2088 - list_projects - None
+2026-03-24 11:41:31,371 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_2088 - tree_structure_access - {'project': 'default', 'reload': False}
+2026-03-24 11:41:34,496 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_2088 - tree_structure_access - {'project': 'default', 'reload': False}
+2026-03-24 11:41:34,706 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_2088 - project_switched - {'project': 'default', 'timestamp': '2026-03-24T11:41:34.435Z', 'client_id': '127.0.0.1_2088'}
+2026-03-24 11:41:38,728 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_2088 - tree_structure_access - {'project': 'default', 'reload': False}
+2026-03-24 11:41:38,937 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_2088 - project_switched - {'project': 'dd', 'timestamp': '2026-03-24T11:41:38.664Z', 'client_id': '127.0.0.1_2088'}
+2026-03-24 11:42:23,476 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_2088 - page_visit - {'page': 'index'}
+2026-03-24 11:42:25,374 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_2088 - list_projects - None
+2026-03-24 11:42:25,578 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_2088 - list_projects - None
+2026-03-24 11:42:25,583 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_2088 - tree_structure_access - {'project': 'default', 'reload': False}
+2026-03-24 11:42:25,788 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_2088 - tree_structure_access - {'project': 'default', 'reload': False}
+2026-03-24 11:42:30,121 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_2088 - tree_structure_access - {'project': 'default', 'reload': False}
+2026-03-24 11:42:30,334 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_2088 - project_switched - {'project': 'dd', 'timestamp': '2026-03-24T11:42:30.057Z', 'client_id': '127.0.0.1_2088'}
+2026-03-24 11:45:52,342 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_3061 - page_visit - {'page': 'index'}
+2026-03-24 11:45:53,850 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_3061 - list_projects - None
+2026-03-24 11:45:54,053 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_3061 - list_projects - None
+2026-03-24 11:45:54,057 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_3061 - tree_structure_access - {'project': 'default', 'reload': False}
+2026-03-24 11:45:54,265 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_3061 - tree_structure_access - {'project': 'default', 'reload': False}
+2026-03-24 11:46:01,438 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_3061 - tree_structure_access - {'project': 'default', 'reload': False}
+2026-03-24 11:46:01,654 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_3061 - project_switched - {'project': 'dd', 'timestamp': '2026-03-24T11:46:01.378Z', 'client_id': '127.0.0.1_3061'}
+2026-03-24 11:47:19,192 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_9452 - page_visit - {'page': 'index'}
+2026-03-24 11:47:20,770 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_9452 - list_projects - None
+2026-03-24 11:47:20,971 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_9452 - list_projects - None
+2026-03-24 11:47:20,979 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_9452 - tree_structure_access - {'project': 'default', 'reload': False}
+2026-03-24 11:47:21,182 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_9452 - tree_structure_access - {'project': 'default', 'reload': False}
+2026-03-24 11:47:27,187 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_9452 - tree_structure_access - {'project': 'dd', 'reload': False}
+2026-03-24 11:47:27,417 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_9452 - project_switched - {'project': 'dd', 'timestamp': '2026-03-24T11:47:27.133Z', 'client_id': '127.0.0.1_9452'}
+2026-03-24 11:47:38,057 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_9452 - tree_structure_access - {'project': 'project-a', 'reload': False}
+2026-03-24 11:47:38,273 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_9452 - project_switched - {'project': 'project-a', 'timestamp': '2026-03-24T11:47:37.996Z', 'client_id': '127.0.0.1_9452'}
+2026-03-24 11:47:44,971 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_9452 - tree_structure_access - {'project': 'dd', 'reload': False}
+2026-03-24 11:47:45,197 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_9452 - project_switched - {'project': 'dd', 'timestamp': '2026-03-24T11:47:44.918Z', 'client_id': '127.0.0.1_9452'}
+2026-03-24 11:47:48,994 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_9452 - model_selected - {'project': 'dd', 'runtime': 'sglang-v0.5.9', 'instance_type': 'g6e.8xlarge', 'model_name': 'gpt-oss-20b-tp1'}
+2026-03-24 11:48:00,478 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_9452 - comparison_generated - {'project': 'dd', 'combinations_count': 1, 'combinations': ['sglang-v0.5.9-g6e.8xlarge-gpt-oss-20b-tp1']}
+2026-03-24 11:48:00,486 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_9452 - chart_added_successfully - {'runtime': 'sglang-v0.5.9', 'instance_type': 'g6e.8xlarge', 'model_name': 'gpt-oss-20b-tp1', 'input_tokens': 256, 'output_tokens': 128, 'random_tokens': 100, 'image_count': 0, 'image_size': '', 'timestamp': '2026-03-24T11:47:59.970Z', 'client_id': '127.0.0.1_9452'}
+2026-03-24 11:48:01,435 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_9452 - comparison_generated - {'project': 'dd', 'combinations_count': 2, 'combinations': ['sglang-v0.5.9-g6e.8xlarge-gpt-oss-20b-tp1', 'vllm-v0.17.0-g6e.8xlarge-gpt-oss-20b-tp1']}
+2026-03-24 11:48:01,441 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_9452 - chart_added_successfully - {'runtime': 'vllm-v0.17.0', 'instance_type': 'g6e.8xlarge', 'model_name': 'gpt-oss-20b-tp1', 'input_tokens': 256, 'output_tokens': 128, 'random_tokens': 100, 'image_count': 0, 'image_size': '', 'timestamp': '2026-03-24T11:48:01.149Z', 'client_id': '127.0.0.1_9452'}
+2026-03-24 11:49:49,241 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_7951 - page_visit - {'page': 'index'}
+2026-03-24 11:49:50,135 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_7951 - list_projects - None
+2026-03-24 11:49:50,337 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_7951 - list_projects - None
+2026-03-24 11:49:50,344 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_7951 - tree_structure_access - {'project': 'default', 'reload': False}
+2026-03-24 11:49:50,549 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_7951 - tree_structure_access - {'project': 'default', 'reload': False}
+2026-03-24 11:49:55,185 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_7951 - tree_structure_access - {'project': 'project-a', 'reload': False}
+2026-03-24 11:49:55,402 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_7951 - project_switched - {'project': 'project-a', 'timestamp': '2026-03-24T11:49:55.125Z', 'client_id': '127.0.0.1_7951'}
+2026-03-24 11:49:58,228 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_7951 - comparison_generated - {'project': 'project-a', 'combinations_count': 1, 'combinations': ['sglang-v0.5.9-g6e.8xlarge-gpt-oss-20b-tp1']}
+2026-03-24 11:49:58,233 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_7951 - chart_added_successfully - {'runtime': 'sglang-v0.5.9', 'instance_type': 'g6e.8xlarge', 'model_name': 'gpt-oss-20b-tp1', 'input_tokens': 1600, 'output_tokens': 400, 'random_tokens': 1600, 'image_count': 0, 'image_size': '', 'timestamp': '2026-03-24T11:49:57.933Z', 'client_id': '127.0.0.1_7951'}
+2026-03-24 11:50:00,812 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_7951 - model_selected - {'project': 'project-a', 'runtime': 'sglang-v0.5.9', 'instance_type': 'g6e.8xlarge', 'model_name': 'gpt-oss-20b-tp1'}
+2026-03-24 11:50:03,172 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_7951 - comparison_generated - {'project': 'project-a', 'combinations_count': 2, 'combinations': ['sglang-v0.5.9-g6e.8xlarge-gpt-oss-20b-tp1', 'sglang-v0.5.9-p5en.48xlarge-gpt-oss-20b-tp1']}
+2026-03-24 11:50:03,178 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_7951 - chart_added_successfully - {'runtime': 'sglang-v0.5.9', 'instance_type': 'p5en.48xlarge', 'model_name': 'gpt-oss-20b-tp1', 'input_tokens': 256, 'output_tokens': 256, 'random_tokens': 100, 'image_count': 0, 'image_size': '', 'timestamp': '2026-03-24T11:50:02.889Z', 'client_id': '127.0.0.1_7951'}
+2026-03-24 11:50:10,949 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_7951 - model_selected - {'project': 'project-a', 'runtime': 'sglang-v0.5.9', 'instance_type': 'p5en.48xlarge', 'model_name': 'gpt-oss-20b-tp1'}
+2026-03-24 11:50:15,002 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_7951 - model_selected - {'project': 'project-a', 'runtime': 'sglang-v0.5.9', 'instance_type': 'g6e.8xlarge', 'model_name': 'gpt-oss-20b-tp1'}
+2026-03-24 11:50:16,736 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_7951 - comparison_generated - {'project': 'project-a', 'combinations_count': 1, 'combinations': ['sglang-v0.5.9-p5en.48xlarge-gpt-oss-20b-tp1']}
+2026-03-24 11:50:16,936 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_7951 - chart_removed - {'runtime': 'sglang-v0.5.9', 'instance_type': 'g6e.8xlarge', 'model_name': 'gpt-oss-20b-tp1', 'input_tokens': 1600, 'output_tokens': 400, 'random_tokens': 1600, 'image_count': 0, 'image_size': '', 'timestamp': '2026-03-24T11:50:16.462Z', 'client_id': '127.0.0.1_7951'}
+2026-03-24 11:50:18,667 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_7951 - comparison_generated - {'project': 'project-a', 'combinations_count': 2, 'combinations': ['sglang-v0.5.9-p5en.48xlarge-gpt-oss-20b-tp1', 'sglang-v0.5.9-g6e.8xlarge-gpt-oss-20b-tp1']}
+2026-03-24 11:50:18,674 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_7951 - chart_added_successfully - {'runtime': 'sglang-v0.5.9', 'instance_type': 'g6e.8xlarge', 'model_name': 'gpt-oss-20b-tp1', 'input_tokens': 256, 'output_tokens': 256, 'random_tokens': 100, 'image_count': 0, 'image_size': '', 'timestamp': '2026-03-24T11:50:18.412Z', 'client_id': '127.0.0.1_7951'}
+2026-03-24 11:50:32,038 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_7951 - tree_structure_access - {'project': 'project-dd', 'reload': False}
+2026-03-24 11:50:32,260 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_7951 - project_switched - {'project': 'project-dd', 'timestamp': '2026-03-24T11:50:32.026Z', 'client_id': '127.0.0.1_7951'}
+2026-03-24 11:50:35,580 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_7951 - model_selected - {'project': 'project-dd', 'runtime': 'sglang-v0.5.9', 'instance_type': 'g6e.8xlarge', 'model_name': 'gpt-oss-20b-tp1'}
+2026-03-24 11:50:38,724 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_7951 - comparison_generated - {'project': 'project-dd', 'combinations_count': 1, 'combinations': ['sglang-v0.5.9-g6e.8xlarge-gpt-oss-20b-tp1']}
+2026-03-24 11:50:38,922 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_7951 - chart_added_successfully - {'runtime': 'sglang-v0.5.9', 'instance_type': 'g6e.8xlarge', 'model_name': 'gpt-oss-20b-tp1', 'input_tokens': 256, 'output_tokens': 256, 'random_tokens': 100, 'image_count': 0, 'image_size': '', 'timestamp': '2026-03-24T11:50:38.472Z', 'client_id': '127.0.0.1_7951'}
+2026-03-24 11:50:40,938 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_7951 - comparison_generated - {'project': 'project-dd', 'combinations_count': 2, 'combinations': ['sglang-v0.5.9-g6e.8xlarge-gpt-oss-20b-tp1', 'sglang-v0.5.9-p5en.48xlarge-gpt-oss-20b-tp1']}
+2026-03-24 11:50:40,944 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_7951 - chart_added_successfully - {'runtime': 'sglang-v0.5.9', 'instance_type': 'p5en.48xlarge', 'model_name': 'gpt-oss-20b-tp1', 'input_tokens': 256, 'output_tokens': 256, 'random_tokens': 100, 'image_count': 0, 'image_size': '', 'timestamp': '2026-03-24T11:50:40.691Z', 'client_id': '127.0.0.1_7951'}
+2026-03-24 11:50:43,623 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_7951 - comparison_generated - {'project': 'project-dd', 'combinations_count': 3, 'combinations': ['sglang-v0.5.9-g6e.8xlarge-gpt-oss-20b-tp1', 'sglang-v0.5.9-p5en.48xlarge-gpt-oss-20b-tp1', 'vllm-v0.17.0-g6e.8xlarge-gpt-oss-20b-tp1']}
+2026-03-24 11:50:43,632 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_7951 - chart_added_successfully - {'runtime': 'vllm-v0.17.0', 'instance_type': 'g6e.8xlarge', 'model_name': 'gpt-oss-20b-tp1', 'input_tokens': 256, 'output_tokens': 256, 'random_tokens': 100, 'image_count': 0, 'image_size': '', 'timestamp': '2026-03-24T11:50:43.372Z', 'client_id': '127.0.0.1_7951'}
+2026-03-24 11:50:45,909 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_7951 - comparison_generated - {'project': 'project-dd', 'combinations_count': 4, 'combinations': ['sglang-v0.5.9-g6e.8xlarge-gpt-oss-20b-tp1', 'sglang-v0.5.9-p5en.48xlarge-gpt-oss-20b-tp1', 'vllm-v0.17.0-g6e.8xlarge-gpt-oss-20b-tp1', 'vllm-v0.17.0-p5en.48xlarge-gpt-oss-20b-tp1']}
+2026-03-24 11:50:45,919 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_7951 - chart_added_successfully - {'runtime': 'vllm-v0.17.0', 'instance_type': 'p5en.48xlarge', 'model_name': 'gpt-oss-20b-tp1', 'input_tokens': 256, 'output_tokens': 256, 'random_tokens': 100, 'image_count': 0, 'image_size': '', 'timestamp': '2026-03-24T11:50:45.658Z', 'client_id': '127.0.0.1_7951'}
+2026-03-24 11:51:21,922 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_7951 - tree_structure_access - {'project': 'project-a', 'reload': False}
+2026-03-24 11:51:22,138 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_7951 - project_switched - {'project': 'project-a', 'timestamp': '2026-03-24T11:51:21.908Z', 'client_id': '127.0.0.1_7951'}
+2026-03-24 11:51:25,689 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_7951 - tree_structure_access - {'project': 'project-dd', 'reload': False}
+2026-03-24 11:51:25,910 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_7951 - project_switched - {'project': 'project-dd', 'timestamp': '2026-03-24T11:51:25.678Z', 'client_id': '127.0.0.1_7951'}
+2026-03-24 11:51:34,736 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_7951 - comparison_generated - {'project': 'project-dd', 'combinations_count': 1, 'combinations': ['sglang-v0.5.9-g6e.8xlarge-gpt-oss-20b-tp1']}
+2026-03-24 11:51:34,740 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_7951 - chart_added_successfully - {'runtime': 'sglang-v0.5.9', 'instance_type': 'g6e.8xlarge', 'model_name': 'gpt-oss-20b-tp1', 'input_tokens': 1600, 'output_tokens': 400, 'random_tokens': 1600, 'image_count': 0, 'image_size': '', 'timestamp': '2026-03-24T11:51:34.262Z', 'client_id': '127.0.0.1_7951'}
+2026-03-24 11:51:36,110 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_7951 - model_selected - {'project': 'project-dd', 'runtime': 'sglang-v0.5.9', 'instance_type': 'g6e.8xlarge', 'model_name': 'gpt-oss-20b-tp1'}
+2026-03-24 11:51:39,260 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_7951 - chart_removed - {'runtime': 'sglang-v0.5.9', 'instance_type': 'g6e.8xlarge', 'model_name': 'gpt-oss-20b-tp1', 'input_tokens': 1600, 'output_tokens': 400, 'random_tokens': 1600, 'image_count': 0, 'image_size': '', 'timestamp': '2026-03-24T11:51:39.012Z', 'client_id': '127.0.0.1_7951'}
+2026-03-24 11:51:39,787 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_7951 - comparison_generated - {'project': 'project-dd', 'combinations_count': 1, 'combinations': ['sglang-v0.5.9-g6e.8xlarge-gpt-oss-20b-tp1']}
+2026-03-24 11:51:40,139 - llm_test_tool.viz_server - INFO - Analytics: 127.0.0.1_7951 - chart_added_successfully - {'runtime': 'sglang-v0.5.9', 'instance_type': 'g6e.8xlarge', 'model_name': 'gpt-oss-20b-tp1', 'input_tokens': 256, 'output_tokens': 256, 'random_tokens': 100, 'image_count': 0, 'image_size': '', 'timestamp': '2026-03-24T11:51:39.543Z', 'client_id': '127.0.0.1_7951'}

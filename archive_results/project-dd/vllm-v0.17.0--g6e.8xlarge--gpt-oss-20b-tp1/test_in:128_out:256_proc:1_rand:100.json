@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "processes": 1,
+    "requests_per_process": 5,
+    "total_requests": 5,
+    "model_id": "/fsx/models/gpt-oss-20b",
+    "input_tokens": 128,
+    "random_tokens": 100,
+    "output_tokens": 256,
+    "url": "http://10.0.152.18:8000/v1/chat/completions",
+    "output_file": "test_results/20260318_114330/test_in:128_out:256_proc:1_rand:100.json",
+    "total_test_duration": 8.335121870040894,
+    "requests_per_second": 0.5998712529893062
+  },
+  "statistics": {
+    "total_requests": 5,
+    "successful_requests": 5,
+    "failed_requests": 0,
+    "success_rate": 1.0,
+    "first_token_latency": {
+      "min": 0.04203653335571289,
+      "max": 0.04662179946899414,
+      "mean": 0.043367624282836914,
+      "p25": 0.04227042198181152,
+      "p50": 0.0424809455871582,
+      "p75": 0.04342842102050781,
+      "p90": 0.04534444808959961
+    },
+    "end_to_end_latency": {
+      "min": 1.6642570495605469,
+      "max": 1.668393850326538,
+      "mean": 1.6655270099639892,
+      "p25": 1.664402723312378,
+      "p50": 1.6646921634674072,
+      "p75": 1.6658892631530762,
+      "p90": 1.6673920154571533
+    },
+    "token_usage": {
+      "prompt_tokens": {
+        "min": 190,
+        "max": 190,
+        "mean": 190,
+        "p25": 190.0,
+        "p50": 190.0,
+        "p75": 190.0,
+        "p90": 190.0
+      },
+      "completion_tokens": {
+        "min": 256,
+        "max": 256,
+        "mean": 256,
+        "p25": 256.0,
+        "p50": 256.0,
+        "p75": 256.0,
+        "p90": 256.0
+      },
+      "total_tokens": {
+        "min": 446,
+        "max": 446,
+        "mean": 446,
+        "p25": 446.0,
+        "p50": 446.0,
+        "p75": 446.0,
+        "p90": 446.0
+      }
+    },
+    "output_tokens_per_second": {
+      "min": 157.78500987642494,
+      "max": 157.85202357176829,
+      "mean": 157.81433653059057,
+      "p25": 157.78881252268576,
+      "p50": 157.80838513798915,
+      "p75": 157.83745154408464,
+      "p90": 157.84619476069483
+    },
+    "error_messages": []
+  }
+}

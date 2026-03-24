@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "processes": 64,
+    "requests_per_process": 5,
+    "total_requests": 320,
+    "model_id": "/fsx/models/gpt-oss-20b",
+    "input_tokens": 128,
+    "random_tokens": 100,
+    "output_tokens": 128,
+    "url": "http://10.0.152.18:8000/v1/chat/completions",
+    "output_file": "test_results/20260318_114330/test_in:128_out:128_proc:64_rand:100.json",
+    "total_test_duration": 22.378854274749756,
+    "requests_per_second": 14.299212822573255
+  },
+  "statistics": {
+    "total_requests": 320,
+    "successful_requests": 320,
+    "failed_requests": 0,
+    "success_rate": 1.0,
+    "first_token_latency": {
+      "min": 0.1685328483581543,
+      "max": 2.4099936485290527,
+      "mean": 2.116381961107254,
+      "p25": 2.3289923071861267,
+      "p50": 2.349430203437805,
+      "p75": 2.374430537223816,
+      "p90": 2.399971294403076
+    },
+    "end_to_end_latency": {
+      "min": 2.1809158325195312,
+      "max": 4.524152994155884,
+      "mean": 4.180269178748131,
+      "p25": 4.3808207511901855,
+      "p50": 4.434561252593994,
+      "p75": 4.488580405712128,
+      "p90": 4.501336216926575
+    },
+    "token_usage": {
+      "prompt_tokens": {
+        "min": 0,
+        "max": 190,
+        "mean": 180.5,
+        "p25": 190.0,
+        "p50": 190.0,
+        "p75": 190.0,
+        "p90": 190.0
+      },
+      "completion_tokens": {
+        "min": 0,
+        "max": 128,
+        "mean": 121.6,
+        "p25": 128.0,
+        "p50": 128.0,
+        "p75": 128.0,
+        "p90": 128.0
+      },
+      "total_tokens": {
+        "min": 0,
+        "max": 318,
+        "mean": 302.1,
+        "p25": 318.0,
+        "p50": 318.0,
+        "p75": 318.0,
+        "p90": 318.0
+      }
+    },
+    "output_tokens_per_second": {
+      "min": 58.82677474403104,
+      "max": 63.606182822769995,
+      "mean": 61.17534884833463,
+      "p25": 60.35219951604544,
+      "p50": 61.129438458295105,
+      "p75": 61.95743622787384,
+      "p90": 63.01136490217207
+    },
+    "error_messages": []
+  }
+}

@@ -1,6 +1,6 @@
 // Main application module
 import { Analytics } from './analytics.js';
-import { STATE } from './config.js';
+import { STATE, getApiUrl } from './config.js';
 import { loadTreeStructure, filterTree } from './tree.js';
 import { disableTokenSliders, setupSliderEventListeners } from './tokens.js';
 import { generateCharts, updateComparisonList, clearCharts, updateUrlWithState, showAllCharts, hideAllCharts } from './charts.js';
@@ -13,6 +13,11 @@ export const analytics = new Analytics();
 // Initialize the application
 async function init() {
     try {
+        // Load project list first
+        await loadProjectList();
+        setupProjectSelector();
+
+        // Then load tree structure for the current project
         await loadTreeStructure();
         setupFilterEventListeners();
         disableTokenSliders();
@@ -270,7 +275,8 @@ async function exportDataFromServer() {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                combinations: STATE.selectedCombinations
+                combinations: STATE.selectedCombinations,
+                project: STATE.currentProject || 'default'
             })
         });
 
@@ -568,10 +574,118 @@ function restoreStateFromUrl() {
     }
 }
 
+// Load project list
+async function loadProjectList() {
+    try {
+        console.log('Loading project list...');
+        const response = await fetch(getApiUrl('/api/projects'));
+        if (!response.ok) {
+            throw new Error(`API returned ${response.status}: ${response.statusText}`);
+        }
+        const data = await response.json();
+        console.log('Projects received:', data);
+        STATE.availableProjects = data.projects || ['default'];
+
+        // Update dropdown
+        updateProjectDropdown();
+    } catch (error) {
+        console.error('Failed to load project list:', error);
+        STATE.availableProjects = ['default'];
+        STATE.currentProject = 'default';
+        updateProjectDropdown();
+    }
+}
+
+// Update project dropdown with available projects
+function updateProjectDropdown() {
+    const dropdown = document.getElementById('project-dropdown');
+    if (!dropdown) {
+        console.warn('Project dropdown element not found');
+        return;
+    }
+
+    console.log('Updating dropdown with projects:', STATE.availableProjects);
+    dropdown.innerHTML = STATE.availableProjects
+        .map(p => `<option value="${p}">${p}</option>`)
+        .join('');
+
+    // Restore last selected project from localStorage
+    const lastProject = localStorage.getItem('lastProject') || 'default';
+    if (STATE.availableProjects.includes(lastProject)) {
+        dropdown.value = lastProject;
+        STATE.currentProject = lastProject;
+    } else {
+        STATE.currentProject = STATE.availableProjects[0] || 'default';
+        dropdown.value = STATE.currentProject;
+    }
+    console.log('Current project set to:', STATE.currentProject);
+}
+
+// Setup project selector
+function setupProjectSelector() {
+    const dropdown = document.getElementById('project-dropdown');
+    if (dropdown) {
+        dropdown.addEventListener('change', function () {
+            console.log('[setupProjectSelector] change event triggered with value:', this.value);
+            switchProject(this.value);
+        });
+    }
+}
+
+// Switch to a different project
+async function switchProject(projectName) {
+    console.log('switchProject called with:', projectName);
+    console.log('Current project:', STATE.currentProject);
+
+    if (!projectName || projectName === STATE.currentProject) {
+        console.log('Skipping: no project name or same project');
+        return;
+    }
+
+    try {
+        console.log('Switching to project:', projectName);
+        console.log('[switchProject] Setting STATE.currentProject from', STATE.currentProject, 'to', projectName);
+        STATE.currentProject = projectName;
+        console.log('[switchProject] STATE.currentProject is now:', STATE.currentProject);
+        localStorage.setItem('lastProject', projectName);
+
+        // Clear current selections and charts
+        console.log('Clearing selections and charts');
+        STATE.selectedCombinations = [];
+        updateComparisonList();
+        clearCharts();
+        disableTokenSliders();
+
+        // Reload tree for the new project
+        console.log('Loading tree structure for:', projectName);
+        console.log('STATE.currentProject before load:', STATE.currentProject);
+        try {
+            console.log('[switchProject] About to call loadTreeStructure, STATE.currentProject =', STATE.currentProject);
+            await loadTreeStructure(false);
+            console.log('Tree structure loaded successfully');
+        } catch (treeError) {
+            console.error('Error loading tree structure:', treeError);
+            console.error('Tree error details:', treeError.message, treeError.stack);
+            throw treeError;
+        }
+
+        console.log('Project switch successful');
+        showSuccess(`Switched to project: ${projectName}`);
+
+        // Log project switch
+        analytics.logEvent('project_switched', { project: projectName });
+    } catch (error) {
+        console.error('Failed to switch project:', error);
+        console.error('Error details:', error.message, error.stack);
+        showError('Failed to switch project: ' + error.message);
+    }
+}
+
 // Expose global functions
 window.addCurrentToChart = addCurrentToChart;
 window.exportData = exportData;
 window.clearComparison = clearComparison;
+window.switchProject = switchProject;
 
 // Chart controls
 window.chartControls = {
